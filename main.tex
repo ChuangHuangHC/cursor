@@ -338,7 +338,12 @@ Similarly, \Cref{eq:qc-3} can also be simplified. Using $G^{R}(-\boldsymbol{q})=
     &+\frac{1}{2}N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{an}^{t}(t_i,t_k;0)\partial_{\tau}\big(G^{R}+G^{A}\big)(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
     &+\int_{\boldsymbol{q}}\Big[\lambda_{an}^{s}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{A}(t_i,t_j;\boldsymbol{q})+\lambda_{an}^{t}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{R}(t_i,t_j;\boldsymbol{q})\Big]\,.\label{eq:qc-final}
 \end{align}
-The two memory kernels $\lambda_{an}^{s}$ and $\lambda_{an}^{t}$ remain distinct: they multiply $G^{A}$ and $G^{R}$, respectively, and cannot be merged into a single $(G^{R}+G^{A})$ structure.
+The two memory kernels $\lambda_{an}^{s}$ and $\lambda_{an}^{t}$ remain distinct: they multiply $G^{A}$ and $G^{R}$, respectively, and cannot be merged into a single $(G^{R}+G^{A})$ structure. The equal-time rule $G^{R}(t,t)=G^{A}(t,t)=\partial_{\tau}G^{R}(t,t)=\partial_{\tau}G^{A}(t,t)=0$, cf.\ \Cref{eq:equal-time-RA}, eliminates the local anomaly insertion $\partial_{\tau}(G^{R}+G^{A})(t_k,t_k)$, while the equal-time Keldysh tadpole is kept. Hence
+\begin{align}
+    \partial_{\tau}\Gamma_{q_i,c_j}^{(2)}(t_i,t_j;\boldsymbol{p})=&-\frac{\mathrm{i}}{6}\Bigg(N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{cl}(t_i,t_k;0)\partial_{\tau}G^{K}(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
+    &\hspace{0.5cm}+2\int_{\boldsymbol{q}}\lambda_{cl}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{K}(t_i,t_j;\boldsymbol{q})\Bigg)\nonumber\\[2ex]
+    &+\int_{\boldsymbol{q}}\Big[\lambda_{an}^{s}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{A}(t_i,t_j;\boldsymbol{q})+\lambda_{an}^{t}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{R}(t_i,t_j;\boldsymbol{q})\Big]\,.\label{eq:qc-equaltime}
+\end{align}
 
 For the quantum-quantum correlation function, the same channel identifications yield
 \begin{align}
@@ -347,9 +352,15 @@ For the quantum-quantum correlation function, the same channel identifications y
     &-\frac{\mathrm{i}}{6}\Bigg(N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{qu}(t_i,t_k;0)\partial_{\tau}\big(G^{R}+G^{A}\big)(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
     &\hspace{0.5cm}+2\int_{\boldsymbol{q}}\lambda_{qu}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}\big(G^{R}+G^{A}\big)(t_i,t_j;\boldsymbol{q})\Bigg)\,.\label{eq:qq-final}
 \end{align}
-Thus every two-point insertion evaluates a dressing either at vanishing channel momentum or at a single momentum $(\boldsymbol{p}-\boldsymbol{q})^{2}$, and at either one time (local tadpole) or two times (memory). This is the information that the four-point truncation must retain.
+The same equal-time rule drops the local quantum insertion $\partial_{\tau}(G^{R}+G^{A})(t_k,t_k)$, so
+\begin{align}
+    \partial_{\tau}\Gamma_{q_i,q_j}^{(2)}(t_i,t_j;\boldsymbol{p})=&\frac{1}{2}N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{an}^{s}(t_i,t_k;0)\partial_{\tau}G^{K}(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
+    &+\int_{\boldsymbol{q}}\lambda_{an}^{t}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{K}(t_i,t_j;\boldsymbol{q})\nonumber\\[2ex]
+    &-\frac{\mathrm{i}}{3}\int_{\boldsymbol{q}}\lambda_{qu}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}\big(G^{R}+G^{A}\big)(t_i,t_j;\boldsymbol{q})\,.\label{eq:qq-equaltime}
+\end{align}
+Thus every two-point insertion evaluates a dressing either at vanishing channel momentum or at a single momentum $(\boldsymbol{p}-\boldsymbol{q})^{2}$, and at either one time (local $G^{K}$ tadpole) or two times (memory). This is the information that the four-point truncation must retain.
 
-Near equilibrium, where $\lambda_{an}=0$, \Cref{eq:qc-final,eq:qq-final} reduce to the classical tadpole $\lambda_{cl}\times G^{K}$ and the quantum tadpole $\lambda_{qu}\times(G^{R}+G^{A})$, respectively.
+Near equilibrium, where $\lambda_{an}=0$, \Cref{eq:qc-equaltime,eq:qq-equaltime} reduce to the classical insertions $\lambda_{cl}\times G^{K}$ (local plus memory) and the quantum memory insertion $\lambda_{qu}\times(G^{R}+G^{A})$, respectively.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
