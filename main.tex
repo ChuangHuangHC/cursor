@@ -1,0 +1,429 @@
+\documentclass[reprint,english,superscriptaddress,preprintnumbers,amsmath,amssymb,aps,prd]{revtex4-1}
+
+%%%%%%%%%%%%% Packages %%%%%%%%%%%%%
+
+% general
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{diagbox}
+
+% math
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{bbm}
+\usepackage{slashed}
+\usepackage{braket}
+\usepackage{titlesec}
+
+% graphics and colors
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{array}
+% \usepackage{ulem}
+
+% floats
+\usepackage{blindtext}
+\usepackage{placeins}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{epstopdf}
+%\usepackage{subcaption}
+%\usepackage{floatrow}
+\usepackage[caption=false]{subfig}
+%\usepackage{dblfloatfix} % fix for bottom-placement of figure
+
+% units and refs
+\usepackage{xspace}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage{appendix}
+
+
+% other
+\usepackage{xifthen}
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks,
+	linkcolor={blue!75!black},%{red!75!black},
+	citecolor={blue!75!black},
+	urlcolor={blue!75!black}
+}
+
+%%%%%%%%%%%%% Options %%%%%%%%%%%%%
+
+% set default value of \includegraphics
+\setkeys{Gin}{width=0.48\textwidth}
+
+% justification of figure captions
+\captionsetup{justification=centerlast}
+
+\graphicspath{{figures/}}
+
+
+%%%%%%%%%%%%% Commands %%%%%%%%%%%%%
+
+% typesetting
+\newcommand{\eqnewline}{\nonumber\\[2ex]}
+\newcommand{\myhfill}{\hfill\textcolor{white}{.}}
+\newcommand*{\eg}{e.g.\@\xspace}
+\newcommand*{\ie}{i.e.\@\xspace}
+\newcommand*{\etc}{etc.\@\xspace}
+\newcommand*{\cf}{cf.\@\xspace}
+\newcommand{\overbar}[1]{\mkern 2mu\overline{\mkern-3mu#1\mkern-1.7mu}\mkern 1.7mu}
+
+
+
+%%%%%%%%%%%%% Referencing %%%%%%%%%%%%%
+
+\def\eq#1{\eqref{#1}}
+%\def\eqs#1{(\ref{#1})}
+\def\Eq#1{Eq.~\labelcref{#1}}
+\def\Eqs#1{Eqs.~\labelcref{#1}}
+
+\def\fig#1{Fig.~\labelcref{#1}}
+\def\Fig#1{Fig.~\labelcref{#1}}
+\def\figs#1#2{Figs.~\labelcref{#1} and \labelcref{#2}}
+\def\Figs#1#2{Figs.~\labelcref{#1} and \labelcref{#2}}
+\def\Tab#1{Tab.~\labelcref{#1}}
+\def\tab#1{Tab.?~\labelcref{#1}}
+\def\Sec#1{Sec.~\labelcref{#1}}
+%\def\Secs#1#2{Sections~\ref{#1} and \ref{#2}}
+\def\App#1{App.~\labelcref{#1}}
+
+
+\newcommand{\tr}{{\text{tr}}}
+
+%%%%%%%%%%%%% Math commands %%%%%%%%%%%%%
+% symbols
+\newcommand{\sumint}{\int\hspace{-4.8mm}\sum}
+\newcommand{\imag}{\text{i}}
+\newcommand{\tinytext}[1]{\text{\tiny{#1}}}
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\sgn}[1]{\mathrm{sgn}\left(#1\right)}
+\usepackage{multirow}
+\usepackage{colortbl}
+\definecolor{kugray5}{RGB}{224,224,224}
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering}p{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft}p{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright}p{#1}}
+
+
+%%%%%%%%%%%%% Comments %%%%%%%%%%%%%
+\newcommand{\colwj}[1]{\textcolor{red}{#1}}
+\newcommand{\colch}[1]{\textcolor{cyan}{#1}}
+\newcommand{\collc}[1]{\textcolor{magenta}{#1}}
+\newcommand{\colyy}[1]{\textcolor{green}{#1}}
+\newcommand{\cJMP}[1]{\textcolor{blue}{#1}}
+
+
+
+
+%%%%%%%%%%%%% Title and hypersetup %%%%%%%%%%%%%
+
+
+\newcommand{\gettitle}{Non-thermal fixed point}
+
+\newcommand{\getHeidelbergAffiliation}{\affiliation{Institut f{\"u}r Theoretische Physik, Universit{\"a}t Heidelberg, Philosophenweg 16, 69120 Heidelberg, Germany}}
+
+\newcommand{\getEMMIAffiliation}{\affiliation{ExtreMe Matter Institute EMMI, GSI, Planckstr. 1, D-64291 Darmstadt, Germany}}
+
+\hypersetup{
+	pdftitle={\gettitle},
+	pdfauthor={Chuang, Pawlowski},
+	pdfkeywords={functional methods}
+		{Distribution Amplitudes}
+		{functional renormalisation group},
+	bookmarksopen=true,
+	bookmarksopenlevel=2,
+	bookmarksnumbered=true
+}
+
+
+\begin{document}
+
+
+\title{\gettitle}
+
+\author{Chuang Huang}
+\email{huang@thphys.uni-heidelberg.de}
+\getHeidelbergAffiliation
+
+\author{Jan M. Pawlowski}
+%\email{j.pawlowski@thphys.uni-heidelberg.de}
+\getHeidelbergAffiliation\getEMMIAffiliation
+
+
+%\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
+\pacs{11.30.Rd, %Chiral symmetries
+	%11.10.Wx, %Finite-temperature field theory
+	12.38.Aw, %General properties of QCD (dynamics, confinement, etc.)
+	05.10.Cc, %renormalisation group methods
+	12.38.Mh,  %Quark-gluon plasma
+	12.38.Gc %Lattice QCD calculations
+}                             % Classification Scheme.
+%\keywords{Suggested keywords}%Use showkeys class option if keyword
+%display desired
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+%\appendix
+\renewcommand{\thesubsection}{{S.\arabic{subsection}}}
+\setcounter{section}{0}
+\titleformat*{\section}{\centering \Large \bfseries}
+
+\onecolumngrid
+
+	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Non-equilibrium real-time O(N) theory}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Effective action and correlation functions}
+\label{sec:action}
+
+With the definition of the fields,
+\begin{align}
+\phi_{\pm}=\frac{1}{\sqrt{2}}(\phi_c\pm\phi_q),\quad 
+\phi_{c}=(\phi_{+}+\phi_{-})/\sqrt{2},\quad \phi_{q}=(\phi_{+}-\phi_{-})/\sqrt{2},
+\end{align}
+the effective action is given by
+\begin{align}
+\Gamma[\phi_c,\phi_q]=&\int_{p}\,\left\{\phi_{q}(-p)P^{R}(p)\phi_{c}(p)+\phi_{c}(-p)P^{A}(p)\phi_{q}(p)+\frac{1}{2}\phi_{q}(-p)\left
+(\mathrm{i}D^{K}(p)\right)\phi_{q}(p)\right\}\nonumber
+\\[2ex]
+&-\int_{p_1,p_2,p_3,p_4}\left\{\frac{1}{6}\left(\phi_{q}(p_1) \phi_{c}(p_2)\right)\left(\lambda_{cl}\cdot \phi_{c}(p_3) \phi_{c}(p_4)+\lambda_{qu}\cdot \phi_{q}(p_3)\phi_{q}(p_4)\right)\right\}\delta(p_1+p_2+p_3+p_4)\nonumber\\[2ex]
+&-\int_{p_1,p_2,p_3,p_4}\left\{\frac{\mathrm{i}}{2}\lambda_{an}\cdot \phi_{q}(p_1) \phi_{c}(p_2)\phi_{q}(p_3)\phi_{c}(p_4)\right\}\delta(p_1+p_2+p_3+p_4)\,.
+\end{align}
+Based on the effective action, we derive the propagators and the vertices. Firstly, the two-point correlation function matrix is given by
+\begin{align}
+    \Gamma^{(2)}=
+\begin{pmatrix}
+  0 & \Gamma^{cq} \\
+  \Gamma^{qc} & \Gamma^{qq}
+\end{pmatrix}=
+\begin{pmatrix}
+  0 & P^{A} \\
+  P^{R} & \mathrm{i}D^{K}
+\end{pmatrix}\,,
+\end{align}
+where $P^{R}=\left(P^{A}\right)^{*}$. Therefore, the propagator reads,
+\begin{align}
+    G=\left(\Gamma^{(2)}\right)^{-1}=\begin{pmatrix}
+  G^{K} & G^{R} \\
+  G^{A} & 0
+\end{pmatrix}\,,
+\end{align}
+with
+\begin{align}
+    G^{R}=\left(P^{R}\right)^{-1},\quad G^{A}=\left(P^{A}\right)^{-1},\quad \text{and}\quad
+    G^{K}=-\mathrm{i}\,G^{R}D^{K}G^{A}\,.
+\end{align}
+In the equilibrium, ultraviolet, and vacuum limit, the correlation functions are given by
+\begin{align}
+    P^{R}_{ij}(p)&=\delta_{ij}\left\{p_{0}^{2}-\boldsymbol{p}^{2}-m^{2}+\mathrm{i}\epsilon\,\mathrm{sgn}(p_{0})\right\}\,,\nonumber\\[2ex] 
+    P^{A}_{ij}(p)&=\delta_{ij}\left\{p_{0}^{2}-\boldsymbol{p}^{2}-m^{2}-\mathrm{i}\epsilon\,\mathrm{sgn}(p_{0})\right\}\,
+\end{align}
+and 
+\begin{align}
+    \mathrm{i}D^{K}_{ij}=\delta_{ij}\left\{2\mathrm{i}\epsilon\,\mathrm{sgn}(p_{0})\right\}\,.
+\end{align}
+
+More importantly, for the vertex, we employ the $s,t,u$-channel approximation, where the details are in \Cref{tab:stu}. Each channel dressing depends on the two endpoint times of that channel and on a single channel momentum. The two-point flows derived below never call a vertex that depends on two independent channel momenta simultaneously. Accordingly, we close the vertex sector on four independent dressings, listed in \Cref{tab:dressings}: a single classical dressing $\lambda_{cl}$, a single quantum dressing $\lambda_{qu}$, and two anomaly dressings $\lambda_{an}^{s}$ and $\lambda_{an}^{t}$.
+
+The identification $\lambda_{cl}^{s}=\lambda_{cl}^{t}=\lambda_{cl}^{u}\equiv\lambda_{cl}$ (and likewise for $\lambda_{qu}$) follows from the $1+3$ leg structure of the $qccc$ and $qqqc$ vertices: the three index pairings are equivalent under permutations of the three identical legs, so the three channels obey the same flow with the same initial condition. By contrast, the $qqcc$ vertex has a $2+2$ leg structure. Its $s$-channel tensor $\delta_{ij}\delta_{kl}$ (amplitude-dependent noise) and $t/u$-channel tensors $\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk}$ (orientation-dependent noise) are independent $\mathrm{O}(N)$ invariants, so we keep
+\begin{align}
+\lambda_{an}^{s}\neq\lambda_{an}^{t}=\lambda_{an}^{u}\,.
+\label{eq:an-stu}
+\end{align}
+At tree level $\lambda_{cl}=\lambda_{qu}$ and $\lambda_{an}=0$; the latter remains zero in equilibrium. One may optionally identify $\lambda_{cl}=\lambda_{qu}$ along the flow.
+
+According to the definition, specifically, the classical vertex is given by 
+\begin{align}
+    \Gamma_{q_{i}c_{j}c_{k}c_{l}}^{(4)}=-\frac{1}{3}&\Big\{\lambda_{cl}\left(t_i,t_k,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{2}\right)^{2}\right)\delta_{ij}\delta_{kl}\delta(t_i-t_j)\delta(t_k-t_l)\nonumber\\[2ex]
+    &+\lambda_{cl}\left(t_i,t_j,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{3}\right)^{2}\right)\delta_{ik}\delta_{jl}\delta(t_i-t_k)\delta(t_j-t_l)\nonumber\\[2ex]
+    &+\lambda_{cl}\left(t_i,t_j,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{4}\right)^{2}\right)\delta_{il}\delta_{jk}\delta(t_i-t_l)\delta(t_j-t_k)\Big\}\,.\label{eq:classical-vertex}
+\end{align}
+Similarly, the quantum vertex is
+\begin{align}
+    \Gamma_{q_{i}q_{j}q_{k}c_{l}}^{(4)}=-\frac{1}{3}&\Big\{\lambda_{qu}\left(t_i,t_k,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{2}\right)^{2}\right)\delta_{ij}\delta_{kl}\delta(t_i-t_j)\delta(t_k-t_l)\nonumber\\[2ex]
+    &+\lambda_{qu}\left(t_i,t_j,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{3}\right)^{2}\right)\delta_{ik}\delta_{jl}\delta(t_i-t_k)\delta(t_j-t_l)\nonumber\\[2ex]
+    &+\lambda_{qu}\left(t_i,t_j,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{4}\right)^{2}\right)\delta_{il}\delta_{jk}\delta(t_i-t_l)\delta(t_j-t_k)\Big\}\,.\label{eq:quantum-vertex}
+\end{align}
+and the anomaly vertex is
+\begin{align}
+    \Gamma_{q_{i}q_{j}c_{k}c_{l}}^{(4)}=-\mathrm{i}&\Big\{\lambda_{an}^{s}\left(t_i,t_k,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{2}\right)^{2}\right)\delta_{ij}\delta_{kl}\delta(t_i-t_j)\delta(t_k-t_l)\nonumber\\[2ex]
+    &+\lambda_{an}^{t}\left(t_i,t_j,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{3}\right)^{2}\right)\delta_{ik}\delta_{jl}\delta(t_i-t_k)\delta(t_j-t_l)\nonumber\\[2ex]
+    &+\lambda_{an}^{t}\left(t_i,t_j,\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{4}\right)^{2}\right)\delta_{il}\delta_{jk}\delta(t_i-t_l)\delta(t_j-t_k)\Big\}\,.\label{eq:anomaly-vertex}
+\end{align}
+where the anomaly vertex vanishes in the equilibrium case.
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[t]
+    \begin{center}
+    \centering
+    \begin{tabular}{c|c|c|c}
+      \hline\hline & & &   \\[-2ex]   
+      Channel & Index pair & Time & Moment   \\[1ex]
+      \hline & & &   \\[-2ex]
+      \quad $s$-channel \quad\quad  & \quad $(i,j)|(k,l)$ \quad\quad  & \quad $\delta(t_i-t_j)\delta(t_k-t_l)$ \quad\quad  & \quad $s=\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{2}\right)^{2}$ \quad\quad \\[1ex]
+      \quad $t$-channel \quad\quad  & \quad $(i,k)|(j,l)$ \quad\quad  & \quad $\delta(t_i-t_k)\delta(t_j-t_l)$ \quad\quad  & \quad $t=\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{3}\right)^{2}$ \quad\quad \\[1ex]
+      \quad $u$-channel \quad\quad  & \quad $(i,l)|(j,k)$ \quad\quad  & \quad $\delta(t_i-t_l)\delta(t_j-t_k)$ \quad\quad  & \quad $u=\left(\boldsymbol{p}_{1}+\boldsymbol{p}_{4}\right)^{2}$ \quad\quad \\[1ex]
+      \hline\hline
+    \end{tabular}
+    \caption{Definition of the $s,t,u$ channels for four-point functions. Each channel dressing depends on the two endpoint times of that channel and on the corresponding single channel momentum.}
+    \label{tab:stu}
+    \end{center}\vspace{-0.5cm}
+\end{table*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}[t]
+    \begin{center}
+    \centering
+    \begin{tabular}{c|c|c|c}
+      \hline\hline & & &   \\[-2ex]
+      Dressing & Vertex & Channel content & Arguments \\[1ex]
+      \hline & & &   \\[-2ex]
+      $\lambda_{cl}(t_a,t_b;\boldsymbol{P}^{2})$ & $qccc$ & $\lambda_{cl}^{s}=\lambda_{cl}^{t}=\lambda_{cl}^{u}$ & two times, one momentum \\[1ex]
+      $\lambda_{qu}(t_a,t_b;\boldsymbol{P}^{2})$ & $qqqc$ & $\lambda_{qu}^{s}=\lambda_{qu}^{t}=\lambda_{qu}^{u}$ & two times, one momentum \\[1ex]
+      $\lambda_{an}^{s}(t_a,t_b;\boldsymbol{P}^{2})$ & $qqcc$ & $s$-channel ($\kappa_{1}$) & two times, one momentum \\[1ex]
+      $\lambda_{an}^{t}(t_a,t_b;\boldsymbol{P}^{2})$ & $qqcc$ & $t=u$-channel ($\kappa_{2}$) & two times, one momentum \\[1ex]
+      \hline\hline
+    \end{tabular}
+    \caption{Independent vertex dressings after the channel truncation. The two-point flows only evaluate these dressings at vanishing channel momentum (local $s$-type insertions) or at a single off-shell channel momentum $(\boldsymbol{p}\mp\boldsymbol{q})^{2}$ (memory insertions).}
+    \label{tab:dressings}
+    \end{center}\vspace{-0.5cm}
+\end{table*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The flow equations for the two-point functions}
+\label{sec:2pointflow}
+
+For the quantum-classical correlation function, the flow equation is given by
+\begin{align}
+    \partial_{\tau}\Gamma_{q_i,c_j}^{(2)}(t_i,t_j;\boldsymbol{p})=&\frac{\mathrm{i}}{2}\tilde{\partial}_{\tau}\int_{\boldsymbol{q}}\int_{t_k}\int_{t_l}\mathrm{tr}\frac{1}{N}\delta_{ij}\nonumber\\[2ex]&\hspace{-2cm}\times\left\{\Gamma_{q_{i}c_{j}c_{k}c_{l}}^{(4)}(t_i,t_j,t_k,t_l;\boldsymbol{p},-\boldsymbol{p},\boldsymbol{-q},\boldsymbol{q})G^{K}_{kl}(t_k,t_l;\boldsymbol{q})\right.\label{eq:qc-1}\\[2ex]
+    &\hspace{-1.5cm}+\Gamma_{q_{i}c_{j}q_{k}c_{l}}^{(4)}(t_i,t_j,t_k,t_l;\boldsymbol{p},-\boldsymbol{p},\boldsymbol{-q},\boldsymbol{q})G^{A}_{kl}(t_k,t_l;\boldsymbol{q})\label{eq:qc-2}\\[2ex]
+    &\left.\hspace{-1.5cm}+\Gamma_{q_{i}c_{j}c_{k}q_{l}}^{(4)}(t_i,t_j,t_k,t_l;\boldsymbol{p},-\boldsymbol{p},\boldsymbol{-q},\boldsymbol{q})G^{R}_{kl}(t_k,t_l;\boldsymbol{q})\right\}\,,\label{eq:qc-3}
+\end{align}
+which includes the contribution from three diagrams. Here $\tau$ is the RG-time. Using \Cref{eq:classical-vertex} together with $G^{K}(t_j,t_i;-\boldsymbol{q})=G^{K}(t_i,t_j;\boldsymbol{q})$, \Cref{eq:qc-1} reduces to
+\begin{align}
+    \partial_{\tau}\Gamma_{q_i,c_j}^{(2),\mathrm{I}}(t_i,t_j;\boldsymbol{p})=&-\frac{\mathrm{i}}{6}\Bigg(N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{cl}(t_i,t_k;0)\partial_{\tau}G^{K}(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
+    &\hspace{0.8cm}+2\int_{\boldsymbol{q}}\lambda_{cl}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{K}(t_i,t_j;\boldsymbol{q})\Bigg)\,.\label{eq:qc-I}
+\end{align}
+The first line is the local $s$-channel insertion, which renormalizes the mass. The second line is the $t+u$ memory insertion and retains $t_i-t_j\neq 0$. To match the definition \Cref{eq:anomaly-vertex}, \Cref{eq:qc-2} can be rewritten as
+\begin{align}
+    \partial_{\tau}\Gamma_{q_i,c_j}^{(2),\mathrm{II}}(t_i,t_j;\boldsymbol{p})&=\frac{\mathrm{i}}{2}\tilde{\partial}_{\tau}\int_{\boldsymbol{q}}\int_{t_k}\int_{t_l}\mathrm{tr}\frac{1}{N}\delta_{ij}\Gamma_{q_{i}c_{j}q_{k}c_{l}}^{(4)}(t_i,t_j,t_k,t_l;\boldsymbol{p},-\boldsymbol{p},\boldsymbol{-q},\boldsymbol{q})G^{A}_{kl}(t_k,t_l;\boldsymbol{q})\nonumber\\[2ex]
+    &=\frac{\mathrm{i}}{2}\tilde{\partial}_{\tau}\int_{\boldsymbol{q}}\int_{t_k}\int_{t_l}\mathrm{tr}\frac{1}{N}\delta_{ij}\Gamma_{q_{i}q_{k}c_{j}c_{l}}^{(4)}(t_i,t_k,t_j,t_l;\boldsymbol{p},-\boldsymbol{q},\boldsymbol{-p},\boldsymbol{q})G^{A}_{kl}(t_k,t_l;\boldsymbol{q})\nonumber\\[2ex]
+    &=\frac{\mathrm{1}}{2}\Bigg(N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{an}^{t}(t_i,t_k;0)\partial_{\tau}G^{A}(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
+    &\hspace{0.5cm}+\int_{\boldsymbol{q}}\lambda_{an}^{s}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{A}(t_i,t_j;\boldsymbol{q})+\int_{\boldsymbol{q}}\lambda_{an}^{t}(t_i,t_j;(\boldsymbol{p}+\boldsymbol{q})^2)\partial_{\tau}G^{A}(t_j,t_i;\boldsymbol{q})\Bigg)\,.
+\end{align}
+Similarly, \Cref{eq:qc-3} can also be simplified. Using $G^{R}(-\boldsymbol{q})=G^{A}(\boldsymbol{q})$ and $\lambda_{an}^{t}=\lambda_{an}^{u}$, the retarded and advanced anomaly insertions combine. Finally, the flow equation of the quantum-classical two-point function reads
+\begin{align}
+    \partial_{\tau}\Gamma_{q_i,c_j}^{(2)}(t_i,t_j;\boldsymbol{p})=&-\frac{\mathrm{i}}{6}\Bigg(N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{cl}(t_i,t_k;0)\partial_{\tau}G^{K}(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
+    &\hspace{0.5cm}+2\int_{\boldsymbol{q}}\lambda_{cl}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{K}(t_i,t_j;\boldsymbol{q})\Bigg)\nonumber\\[2ex]
+    &+\frac{1}{2}N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{an}^{t}(t_i,t_k;0)\partial_{\tau}\big(G^{R}+G^{A}\big)(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
+    &+\int_{\boldsymbol{q}}\Big[\lambda_{an}^{s}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{A}(t_i,t_j;\boldsymbol{q})+\lambda_{an}^{t}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{R}(t_i,t_j;\boldsymbol{q})\Big]\,.\label{eq:qc-final}
+\end{align}
+The two memory kernels $\lambda_{an}^{s}$ and $\lambda_{an}^{t}$ remain distinct: they multiply $G^{A}$ and $G^{R}$, respectively, and cannot be merged into a single $(G^{R}+G^{A})$ structure.
+
+For the quantum-quantum correlation function, the same channel identifications yield
+\begin{align}
+    \partial_{\tau}\Gamma_{q_i,q_j}^{(2)}(t_i,t_j;\boldsymbol{p})=&\frac{1}{2}N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{an}^{s}(t_i,t_k;0)\partial_{\tau}G^{K}(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
+    &+\int_{\boldsymbol{q}}\lambda_{an}^{t}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}G^{K}(t_i,t_j;\boldsymbol{q})\nonumber\\[2ex]
+    &-\frac{\mathrm{i}}{6}\Bigg(N\delta(t_i-t_j)\int_{\boldsymbol{q}}\int_{t_k}\lambda_{qu}(t_i,t_k;0)\partial_{\tau}\big(G^{R}+G^{A}\big)(t_k,t_k;\boldsymbol{q})\nonumber\\[2ex]
+    &\hspace{0.5cm}+2\int_{\boldsymbol{q}}\lambda_{qu}(t_i,t_j;(\boldsymbol{p}-\boldsymbol{q})^2)\partial_{\tau}\big(G^{R}+G^{A}\big)(t_i,t_j;\boldsymbol{q})\Bigg)\,.\label{eq:qq-final}
+\end{align}
+Thus every two-point insertion evaluates a dressing either at vanishing channel momentum or at a single momentum $(\boldsymbol{p}-\boldsymbol{q})^{2}$, and at either one time (local tadpole) or two times (memory). This is the information that the four-point truncation must retain.
+
+Near equilibrium, where $\lambda_{an}=0$, \Cref{eq:qc-final,eq:qq-final} reduce to the classical tadpole $\lambda_{cl}\times G^{K}$ and the quantum tadpole $\lambda_{qu}\times(G^{R}+G^{A})$, respectively.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{The flow equations for the four-point functions}
+\label{sec:4pointflow}
+
+The four-point functions include the classical, quantum, and anomaly parts. The two-point flows in \Cref{sec:2pointflow} only require the four dressings of \Cref{tab:dressings}, each a function of two times and one channel momentum. A simultaneous dependence on two channel momenta $(\boldsymbol{p}_{s},\boldsymbol{p}_{t})$ is therefore superfluous for the two-point sector. We close the four-point system by a channel-diagonal truncation: each dressing is extracted on its own momentum axis, with the crossed channel momenta set to zero.
+
+\subsubsection{Channel-diagonal kinematics}
+
+Instead of the two-dimensional configuration with independent $\boldsymbol{p}_{s}$ and $\boldsymbol{p}_{t}$, we use the two one-dimensional slices
+\begin{align}
+    \boldsymbol{p}_{i}=\boldsymbol{p}_{j}=\frac{\boldsymbol{P}}{2}\,,\qquad
+    \boldsymbol{p}_{k}=\boldsymbol{p}_{l}=-\frac{\boldsymbol{P}}{2}\,,
+    \label{eq:s-slice}
+\end{align}
+which realizes $s=\boldsymbol{P}^{2}$ and $t=u=0$, and
+\begin{align}
+    \boldsymbol{p}_{i}=\boldsymbol{p}_{k}=\frac{\boldsymbol{P}}{2}\,,\qquad
+    \boldsymbol{p}_{j}=\boldsymbol{p}_{l}=-\frac{\boldsymbol{P}}{2}\,,
+    \label{eq:t-slice}
+\end{align}
+which realizes $t=\boldsymbol{P}^{2}$ and $s=u=0$. The $s$-slice determines $\lambda_{cl}$, $\lambda_{qu}$, and $\lambda_{an}^{s}$; the $t$-slice determines $\lambda_{an}^{t}$ (and, as a consistency check, the $t$-channel projections of $\lambda_{cl}$ and $\lambda_{qu}$, which are identified with the $s$-channel dressings). The omitted mixed dependence of, \eg, $\lambda_{cl}^{s}$ on a nonzero $t$-channel momentum enters the vertex flow with relative weight $2/(N+4)$ and is never sampled by \Cref{eq:qc-final,eq:qq-final}.
+
+\subsubsection{General bubble flow}
+
+For the flow equation of the four-point function, the general form is given by
+\begin{align}
+    \partial_{\tau}\Gamma_{ijkl}^{(4)}(t_i,t_j,t_k,t_l;\boldsymbol{p_{i}},\boldsymbol{p_{j}},\boldsymbol{p_{k}},\boldsymbol{p_{l}})=&\nonumber\\[2ex]
+    &\hspace{-5cm}\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}jj_{1}}^{(4)}(t_i,t_{i_1},t_j,t_{j_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{q}-\boldsymbol{p_{s}})\partial_{\tau}G_{i_{1}k_{1}}(t_{i_1},t_{k_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{k_{1}kl_{1}l}^{(4)}(t_{k_1},t_k,t_{l_1},t_l;\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{p_s}-\boldsymbol{q},\boldsymbol{p_{l}})G_{l_{1}j_{1}}(t_{l_1},t_{j_1};\boldsymbol{q}-\boldsymbol{p_s})\right]\nonumber\\[2ex]
+    &\hspace{-5.3cm}+\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}jj_{1}}^{(4)}(t_i,t_{i_1},t_j,t_{j_1};\boldsymbol{p_{i}},-\boldsymbol{q}-\boldsymbol{p_{s}},\boldsymbol{p_{j}},\boldsymbol{q})G_{i_{1}k_{1}}(t_{i_1},t_{k_1};\boldsymbol{q}+\boldsymbol{p_s})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{k_{1}kl_{1}l}^{(4)}(t_{k_1},t_k,t_{l_1},t_l;-\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{p_s}+\boldsymbol{q},\boldsymbol{p_{l}})\partial_{\tau}G_{l_{1}j_{1}}(t_{l_1},t_{j_1};\boldsymbol{q})\right]\nonumber\\[2ex]
+    &\hspace{-5.3cm}+\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}kk_{1}}^{(4)}(t_i,t_{i_1},t_k,t_{k_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{q}-\boldsymbol{p_{t}})\partial_{\tau}G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jl_{1}l}^{(4)}(t_{j_1},t_j,t_{l_1},t_l;\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{p_t}-\boldsymbol{q},\boldsymbol{p_{l}})G_{l_{1}k_{1}}(t_{l_1},t_{k_1};\boldsymbol{q}-\boldsymbol{p}_{t})\right]\nonumber\\[2ex]
+    &\hspace{-5.3cm}+\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}kk_{1}}^{(4)}(t_i,t_{i_1},t_k,t_{k_1};\boldsymbol{p_{i}},-\boldsymbol{q}-\boldsymbol{p_{t}},\boldsymbol{p_{k}},\boldsymbol{q})G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q}+\boldsymbol{p}_{t})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jl_{1}l}^{(4)}(t_{j_1},t_j,t_{l_1},t_l;-\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{p_t}+\boldsymbol{q},\boldsymbol{p_{l}})\partial_{\tau}G_{l_{1}k_{1}}(t_{l_1},t_{k_1};\boldsymbol{q})\right]\nonumber\\[2ex]
+    &\hspace{-5.3cm}+2\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}ll_{1}}^{(4)}(t_i,t_{i_1},t_l,t_{l_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{l}},\boldsymbol{q})\partial_{\tau}G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jk_{1}k}^{(4)}(t_{j_1},t_j,t_{k_1},t_k;\boldsymbol{q},\boldsymbol{p_{j}},-\boldsymbol{q},\boldsymbol{p_{k}})G_{k_{1}l_{1}}(t_{k_1},t_{l_1};\boldsymbol{q})\right]\,.\label{eq:4point-flow}
+\end{align}
+On the $s$-slice \Cref{eq:s-slice} one has $\boldsymbol{p}_{s}=\boldsymbol{P}$ and $\boldsymbol{p}_{t}=0$; on the $t$-slice \Cref{eq:t-slice} one has $\boldsymbol{p}_{t}=\boldsymbol{P}$ and $\boldsymbol{p}_{s}=0$. The last (weight-$2$) diagram is independent of the channel momentum and is evaluated at vanishing momentum.
+
+With the projection operators of the classical and anomaly vertices in $s$ and $t$-channels, which are given by
+\begin{align}
+    \left(P_{cl}^{s}\right)_{ijkl}&=\frac{3}{N(N-1)(N+2)}\left(\delta_{il}\delta_{jk}+\delta_{ik}\delta_{jl}-(1+N)\delta_{ij}\delta_{kl}\right)\nonumber\\[2ex]
+    \left(P_{cl}^{t}\right)_{ijkl}&=\frac{3}{N(N-1)(N+2)}\left(\delta_{il}\delta_{jk}-(1+N)\delta_{ik}\delta_{jl}+\delta_{ij}\delta_{kl}\right)\nonumber\\[2ex]
+    \left(P_{an}^{s}\right)_{ijkl}&=\frac{\mathrm{i}}{3}\left(P_{cl}^{s}\right)_{ijkl}\,,\quad\left(P_{an}^{t}\right)_{ijkl}=\frac{\mathrm{i}}{3}\left(P_{cl}^{t}\right)_{ijkl}\,,
+    \label{eq:projectors}
+\end{align}
+we obtain the flows of the dressings. In particular, for the four-point vertices in the flow in \Cref{eq:4point-flow}, we need to exchange the internal indices together with the corresponding times and momenta, such that their definitions match those in \Cref{eq:classical-vertex} and \Cref{eq:anomaly-vertex}.
+
+\subsubsection{Reduced dressing flows}
+
+After projection, the self-channel bubble (flavor trace $N+4$) carries the external channel momentum $\boldsymbol{P}$, while the crossed-channel bubbles (relative weight $4$) sit at vanishing momentum. Suppressing Keldysh labels, the classical dressing on the $s$-slice obeys
+\begin{align}
+    \partial_{\tau}\lambda_{cl}(t_a,t_b;\boldsymbol{P}^{2})
+    &=(N+4)\,\tilde{\partial}_{\tau}\!\int_{t_{1},t_{2}}\lambda_{cl}(t_a,t_{1};\boldsymbol{P}^{2})\,\Pi(t_{1},t_{2};\boldsymbol{P})\,\lambda_{cl}(t_{2},t_b;\boldsymbol{P}^{2})\nonumber\\[2ex]
+    &\quad +4\,\tilde{\partial}_{\tau}\!\int_{t_{1},t_{2}}\lambda_{cl}(t_a,t_{1};0)\,\Pi(t_{1},t_{2};0)\,\lambda_{cl}(t_{2},t_b;0)\,,
+    \label{eq:lambda-cl-flow}
+\end{align}
+and $\lambda_{qu}$ satisfies the same structure with the propagator combination appropriate to $qqqc$. Here $\Pi$ denotes the one-loop bubble built from the two-point propagators in \Cref{eq:4point-flow}. The first line is the memory-carrying self-channel resummation; the second line is a local renormalization of the coupling and may be evaluated at equal time, $t_{1}=t_{2}$.
+
+The anomaly dressings are projected separately. The $s$-channel dressing $\lambda_{an}^{s}$ is extracted with $P_{an}^{s}$ on \Cref{eq:s-slice}; the $t$-channel dressing $\lambda_{an}^{t}$ is extracted with $P_{an}^{t}$ on \Cref{eq:t-slice}. Their flows have the same split into a self-channel two-time convolution at momentum $\boldsymbol{P}$ and a weight-$4$ equal-time piece at zero momentum, but they are not identified with each other.
+
+\subsubsection{Time truncation}
+
+The channel ansatz already collapses four external times onto the two endpoint times of each channel. The remaining cost is the two-time convolution in \Cref{eq:lambda-cl-flow}. We keep this two-time dependence in the self-channel bubble, since it is exactly the memory $t_i-t_j\neq 0$ required by \Cref{eq:qc-final,eq:qq-final}. Two optional further reductions, not used in the baseline truncation, are:
+\begin{itemize}
+\item a derivative expansion in the center time $T=(t_a+t_b)/2$, retaining the full relative-time dependence $\Delta t=t_a-t_b$ at zeroth order in $\partial_{T}$;
+\item replacing the weight-$4$ crossed bubble by its equal-time, zero-momentum value, as already indicated in \Cref{eq:lambda-cl-flow}.
+\end{itemize}
+
+\subsubsection{Anomaly sector}
+
+Since $\lambda_{an}$ vanishes in equilibrium, a practical hierarchy is to first solve the coupled system of $\lambda_{cl}$, $\lambda_{qu}$ and the two-point functions with $\lambda_{an}=0$, and only afterwards generate $\lambda_{an}^{s}$ and $\lambda_{an}^{t}$ from the right-hand side of \Cref{eq:4point-flow}. Full backcoupling of the anomaly dressings is required only if they grow to a size comparable with $\lambda_{cl}$.
+
+
+\hfill
+\bibliography{ref-lib}% Produces the bibliography via BibTeX.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
