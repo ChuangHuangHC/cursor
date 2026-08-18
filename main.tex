@@ -356,7 +356,7 @@ Near equilibrium, where $\lambda_{an}=0$, \Cref{eq:qc-final,eq:qq-final} reduce 
 \subsection{The flow equations for the four-point functions}
 \label{sec:4pointflow}
 
-The four-point functions include the classical, quantum, and anomaly parts. The two-point flows in \Cref{sec:2pointflow} only require the four dressings of \Cref{tab:dressings}, each a function of two times and one channel momentum. A simultaneous dependence on two channel momenta $(\boldsymbol{p}_{s},\boldsymbol{p}_{t})$ is therefore superfluous for the two-point sector. We close the four-point system by a channel-diagonal truncation: each dressing is extracted on its own momentum axis, with the crossed channel momenta set to zero.
+The four-point functions include the classical, quantum, and anomaly parts. The two-point flows in \Cref{sec:2pointflow} only require the four dressings of \Cref{tab:dressings}, each a function of two times and one channel momentum. A simultaneous dependence on two channel momenta $(\boldsymbol{p}_{s},\boldsymbol{p}_{t})$ is therefore superfluous for the two-point sector. We close the four-point system by a channel-diagonal truncation: each dressing is extracted on its own momentum axis, with the crossed channel momenta set to zero. The analogous reduction in time is the collocation \Cref{eq:time-slice}, which projects the right-hand side onto the two-time support of the channel ansatz.
 
 \subsubsection{Channel-diagonal kinematics}
 
@@ -372,18 +372,20 @@ which realizes $s=\boldsymbol{P}^{2}$ and $t=u=0$, and
     \boldsymbol{p}_{j}=\boldsymbol{p}_{l}=-\frac{\boldsymbol{P}}{2}\,,
     \label{eq:t-slice}
 \end{align}
-which realizes $t=\boldsymbol{P}^{2}$ and $s=u=0$. The $s$-slice determines $\lambda_{cl}$, $\lambda_{qu}$, and $\lambda_{an}^{s}$; the $t$-slice determines $\lambda_{an}^{t}$ (and, as a consistency check, the $t$-channel projections of $\lambda_{cl}$ and $\lambda_{qu}$, which are identified with the $s$-channel dressings). The omitted mixed dependence of, \eg, $\lambda_{cl}^{s}$ on a nonzero $t$-channel momentum enters the vertex flow with relative weight $2/(N+4)$ and is never sampled by \Cref{eq:qc-final,eq:qq-final}.
+which realizes $t=\boldsymbol{P}^{2}$ and $s=u=0$. The $s$-slice determines $\lambda_{cl}$, $\lambda_{qu}$, and $\lambda_{an}^{s}$; the $t$-slice determines $\lambda_{an}^{t}$ (and, as a consistency check, the $t$-channel projections of $\lambda_{cl}$ and $\lambda_{qu}$, which are identified with the $s$-channel dressings). The omitted mixed dependence of, \eg, $\lambda_{cl}^{s}$ on a nonzero $t$-channel momentum enters the vertex flow with relative weight $2/(N+4)$ and is never sampled by \Cref{eq:qc-final,eq:qq-final}. 
 
-\subsubsection{General bubble flow}
+We also employ the approximation $\lambda_{cl}=\lambda_{qu}$.
+
+\subsubsection{General flow}
 
 For the flow equation of the four-point function, the general form is given by
 \begin{align}
     \partial_{\tau}\Gamma_{ijkl}^{(4)}(t_i,t_j,t_k,t_l;\boldsymbol{p_{i}},\boldsymbol{p_{j}},\boldsymbol{p_{k}},\boldsymbol{p_{l}})=&\nonumber\\[2ex]
-    &\hspace{-5cm}\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}jj_{1}}^{(4)}(t_i,t_{i_1},t_j,t_{j_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{q}-\boldsymbol{p_{s}})\partial_{\tau}G_{i_{1}k_{1}}(t_{i_1},t_{k_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{k_{1}kl_{1}l}^{(4)}(t_{k_1},t_k,t_{l_1},t_l;\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{p_s}-\boldsymbol{q},\boldsymbol{p_{l}})G_{l_{1}j_{1}}(t_{l_1},t_{j_1};\boldsymbol{q}-\boldsymbol{p_s})\right]\nonumber\\[2ex]
-    &\hspace{-5.3cm}+\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}jj_{1}}^{(4)}(t_i,t_{i_1},t_j,t_{j_1};\boldsymbol{p_{i}},-\boldsymbol{q}-\boldsymbol{p_{s}},\boldsymbol{p_{j}},\boldsymbol{q})G_{i_{1}k_{1}}(t_{i_1},t_{k_1};\boldsymbol{q}+\boldsymbol{p_s})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{k_{1}kl_{1}l}^{(4)}(t_{k_1},t_k,t_{l_1},t_l;-\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{p_s}+\boldsymbol{q},\boldsymbol{p_{l}})\partial_{\tau}G_{l_{1}j_{1}}(t_{l_1},t_{j_1};\boldsymbol{q})\right]\nonumber\\[2ex]
-    &\hspace{-5.3cm}+\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}kk_{1}}^{(4)}(t_i,t_{i_1},t_k,t_{k_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{q}-\boldsymbol{p_{t}})\partial_{\tau}G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jl_{1}l}^{(4)}(t_{j_1},t_j,t_{l_1},t_l;\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{p_t}-\boldsymbol{q},\boldsymbol{p_{l}})G_{l_{1}k_{1}}(t_{l_1},t_{k_1};\boldsymbol{q}-\boldsymbol{p}_{t})\right]\nonumber\\[2ex]
-    &\hspace{-5.3cm}+\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}kk_{1}}^{(4)}(t_i,t_{i_1},t_k,t_{k_1};\boldsymbol{p_{i}},-\boldsymbol{q}-\boldsymbol{p_{t}},\boldsymbol{p_{k}},\boldsymbol{q})G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q}+\boldsymbol{p}_{t})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jl_{1}l}^{(4)}(t_{j_1},t_j,t_{l_1},t_l;-\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{p_t}+\boldsymbol{q},\boldsymbol{p_{l}})\partial_{\tau}G_{l_{1}k_{1}}(t_{l_1},t_{k_1};\boldsymbol{q})\right]\nonumber\\[2ex]
-    &\hspace{-5.3cm}+2\int_{\boldsymbol{q},t}\mathrm{tr}\left[\Gamma_{ii_{1}ll_{1}}^{(4)}(t_i,t_{i_1},t_l,t_{l_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{l}},\boldsymbol{q})\partial_{\tau}G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jk_{1}k}^{(4)}(t_{j_1},t_j,t_{k_1},t_k;\boldsymbol{q},\boldsymbol{p_{j}},-\boldsymbol{q},\boldsymbol{p_{k}})G_{k_{1}l_{1}}(t_{k_1},t_{l_1};\boldsymbol{q})\right]\,.\label{eq:4point-flow}
+    &\hspace{-5cm}\int_{\boldsymbol{q}}\int_{t_{i_1},t_{j_1},t_{k_1},t_{l_1}}\mathrm{tr}\left[\Gamma_{ii_{1}jj_{1}}^{(4)}(t_i,t_{i_1},t_j,t_{j_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{q}-\boldsymbol{p_{s}})\partial_{\tau}G_{i_{1}k_{1}}(t_{i_1},t_{k_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{k_{1}kl_{1}l}^{(4)}(t_{k_1},t_k,t_{l_1},t_l;\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{p_s}-\boldsymbol{q},\boldsymbol{p_{l}})G_{l_{1}j_{1}}(t_{l_1},t_{j_1};\boldsymbol{q}-\boldsymbol{p_s})\right]\nonumber\\[2ex]
+    &\hspace{-5.3cm}+\int_{\boldsymbol{q}}\int_{t_{i_1},t_{j_1},t_{k_1},t_{l_1}}\mathrm{tr}\left[\Gamma_{ii_{1}jj_{1}}^{(4)}(t_i,t_{i_1},t_j,t_{j_1};\boldsymbol{p_{i}},-\boldsymbol{q}-\boldsymbol{p_{s}},\boldsymbol{p_{j}},\boldsymbol{q})G_{i_{1}k_{1}}(t_{i_1},t_{k_1};\boldsymbol{q}+\boldsymbol{p_s})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{k_{1}kl_{1}l}^{(4)}(t_{k_1},t_k,t_{l_1},t_l;-\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{p_s}+\boldsymbol{q},\boldsymbol{p_{l}})\partial_{\tau}G_{l_{1}j_{1}}(t_{l_1},t_{j_1};\boldsymbol{q})\right]\nonumber\\[2ex]
+    &\hspace{-5.3cm}+\int_{\boldsymbol{q}}\int_{t_{i_1},t_{j_1},t_{k_1},t_{l_1}}\mathrm{tr}\left[\Gamma_{ii_{1}kk_{1}}^{(4)}(t_i,t_{i_1},t_k,t_{k_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{k}},\boldsymbol{q}-\boldsymbol{p_{t}})\partial_{\tau}G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jl_{1}l}^{(4)}(t_{j_1},t_j,t_{l_1},t_l;\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{p_t}-\boldsymbol{q},\boldsymbol{p_{l}})G_{l_{1}k_{1}}(t_{l_1},t_{k_1};\boldsymbol{q}-\boldsymbol{p}_{t})\right]\nonumber\\[2ex]
+    &\hspace{-5.3cm}+\int_{\boldsymbol{q}}\int_{t_{i_1},t_{j_1},t_{k_1},t_{l_1}}\mathrm{tr}\left[\Gamma_{ii_{1}kk_{1}}^{(4)}(t_i,t_{i_1},t_k,t_{k_1};\boldsymbol{p_{i}},-\boldsymbol{q}-\boldsymbol{p_{t}},\boldsymbol{p_{k}},\boldsymbol{q})G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q}+\boldsymbol{p}_{t})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jl_{1}l}^{(4)}(t_{j_1},t_j,t_{l_1},t_l;-\boldsymbol{q},\boldsymbol{p_{j}},\boldsymbol{p_t}+\boldsymbol{q},\boldsymbol{p_{l}})\partial_{\tau}G_{l_{1}k_{1}}(t_{l_1},t_{k_1};\boldsymbol{q})\right]\nonumber\\[2ex]
+    &\hspace{-5.3cm}+2\int_{\boldsymbol{q}}\int_{t_{i_1},t_{j_1},t_{k_1},t_{l_1}}\mathrm{tr}\left[\Gamma_{ii_{1}ll_{1}}^{(4)}(t_i,t_{i_1},t_l,t_{l_1};\boldsymbol{p_{i}},-\boldsymbol{q},\boldsymbol{p_{l}},\boldsymbol{q})\partial_{\tau}G_{i_{1}j_{1}}(t_{i_1},t_{j_1};\boldsymbol{q})\right.\nonumber\\[2ex]&\hspace{-4cm}\times\left.\Gamma_{j_{1}jk_{1}k}^{(4)}(t_{j_1},t_j,t_{k_1},t_k;\boldsymbol{q},\boldsymbol{p_{j}},-\boldsymbol{q},\boldsymbol{p_{k}})G_{k_{1}l_{1}}(t_{k_1},t_{l_1};\boldsymbol{q})\right]\,.\label{eq:4point-flow}
 \end{align}
 On the $s$-slice \Cref{eq:s-slice} one has $\boldsymbol{p}_{s}=\boldsymbol{P}$ and $\boldsymbol{p}_{t}=0$; on the $t$-slice \Cref{eq:t-slice} one has $\boldsymbol{p}_{t}=\boldsymbol{P}$ and $\boldsymbol{p}_{s}=0$. The last (weight-$2$) diagram is independent of the channel momentum and is evaluated at vanishing momentum.
 
@@ -396,31 +398,70 @@ With the projection operators of the classical and anomaly vertices in $s$ and $
 \end{align}
 we obtain the flows of the dressings. In particular, for the four-point vertices in the flow in \Cref{eq:4point-flow}, we need to exchange the internal indices together with the corresponding times and momenta, such that their definitions match those in \Cref{eq:classical-vertex} and \Cref{eq:anomaly-vertex}.
 
-\subsubsection{Reduced dressing flows}
+\subsubsection{Time collocation}
+\label{sec:time-slice}
 
-After projection, the self-channel bubble (flavor trace $N+4$) carries the external channel momentum $\boldsymbol{P}$, while the crossed-channel bubbles (relative weight $4$) sit at vanishing momentum. Suppressing Keldysh labels, the classical dressing on the $s$-slice obeys
+The channel ansatz of \Cref{tab:stu} lives on a two-time support. After the $\mathrm{O}(N)$ projection, dummy loop times can be eliminated by the $\delta$-functions already present in the vertices, but crossed-channel bubbles leave a smooth dependence on the two spectator external times. That dependence lies outside the ansatz and must be removed by a further projection, the time analogue of the momentum slices \Cref{eq:s-slice,eq:t-slice}. We collocate the right-hand side on the support of the ansatz, \ie\ we identify the spectator times with the two endpoint times of the projected channel:
 \begin{align}
-    \partial_{\tau}\lambda_{cl}(t_a,t_b;\boldsymbol{P}^{2})
-    &=(N+4)\,\tilde{\partial}_{\tau}\!\int_{t_{1},t_{2}}\lambda_{cl}(t_a,t_{1};\boldsymbol{P}^{2})\,\Pi(t_{1},t_{2};\boldsymbol{P})\,\lambda_{cl}(t_{2},t_b;\boldsymbol{P}^{2})\nonumber\\[2ex]
-    &\quad +4\,\tilde{\partial}_{\tau}\!\int_{t_{1},t_{2}}\lambda_{cl}(t_a,t_{1};0)\,\Pi(t_{1},t_{2};0)\,\lambda_{cl}(t_{2},t_b;0)\,,
-    \label{eq:lambda-cl-flow}
+    s\text{-channel:}&\quad t_j\to t_i\,,\qquad t_l\to t_k\,,\nonumber\\[1ex]
+    t\text{-channel:}&\quad t_k\to t_i\,,\qquad t_l\to t_j\,,\nonumber\\[1ex]
+    u\text{-channel:}&\quad t_l\to t_i\,,\qquad t_k\to t_j\,.
+    \label{eq:time-slice}
 \end{align}
-and $\lambda_{qu}$ satisfies the same structure with the propagator combination appropriate to $qqqc$. Here $\Pi$ denotes the one-loop bubble built from the two-point propagators in \Cref{eq:4point-flow}. The first line is the memory-carrying self-channel resummation; the second line is a local renormalization of the coupling and may be evaluated at equal time, $t_{1}=t_{2}$.
+This collocation is equivalent, at leading order in a center-time derivative expansion, to averaging the spectator times. After \Cref{eq:time-slice}, equal-time retarded and advanced propagators drop out. For a real scalar field the equal-time commutator vanishes, so $\rho(t,t;\boldsymbol{q})=0$ and therefore
+\begin{align}
+    G^{R}(t,t;\boldsymbol{q})=G^{A}(t,t;\boldsymbol{q})=\partial_{\tau}G^{R}(t,t;\boldsymbol{q})=\partial_{\tau}G^{A}(t,t;\boldsymbol{q})=0\,.
+    \label{eq:equal-time-RA}
+\end{align}
+The equal-time Keldysh propagator $G^{K}(t,t;\boldsymbol{q})$ remains finite and is kept whenever it appears.
 
-The anomaly dressings are projected separately. The $s$-channel dressing $\lambda_{an}^{s}$ is extracted with $P_{an}^{s}$ on \Cref{eq:s-slice}; the $t$-channel dressing $\lambda_{an}^{t}$ is extracted with $P_{an}^{t}$ on \Cref{eq:t-slice}. Their flows have the same split into a self-channel two-time convolution at momentum $\boldsymbol{P}$ and a weight-$4$ equal-time piece at zero momentum, but they are not identified with each other.
+\subsubsection{$s$-channel $qccc$ flow after collocation}
 
-\subsubsection{Time truncation}
+As an explicit illustration we take the $qccc$ projection of \Cref{eq:4point-flow} on the $s$-slice \Cref{eq:s-slice}, generated by the $qccc$--$qqcc$ bubble (the diagrams that produce a residual $(t_i,t_j,t_k,t_l)$ dependence before collocation). After collapsing dummy times, applying \Cref{eq:time-slice,eq:equal-time-RA}, and using $\bigl(\boldsymbol{P}/2\mp\boldsymbol{q}\bigr)^{2}=\bigl(\boldsymbol{P}\mp 2\boldsymbol{q}\bigr)^{2}/4$, the sixteen terms collapse to three groups. Crossed $t$- and $u$-channel insertions that force an equal-time $G^{R}$ or $G^{A}$ vanish identically.
 
-The channel ansatz already collapses four external times onto the two endpoint times of each channel. The remaining cost is the two-time convolution in \Cref{eq:lambda-cl-flow}. We keep this two-time dependence in the self-channel bubble, since it is exactly the memory $t_i-t_j\neq 0$ required by \Cref{eq:qc-final,eq:qq-final}. Two optional further reductions, not used in the baseline truncation, are:
-\begin{itemize}
-\item a derivative expansion in the center time $T=(t_a+t_b)/2$, retaining the full relative-time dependence $\Delta t=t_a-t_b$ at zeroth order in $\partial_{T}$;
-\item replacing the weight-$4$ crossed bubble by its equal-time, zero-momentum value, as already indicated in \Cref{eq:lambda-cl-flow}.
-\end{itemize}
+The leading, flavor-enhanced self-channel chain depends only on the endpoint times $(t_i,t_k)$ already before collocation:
+\begin{align}
+    \partial_{\tau}\lambda_{cl}(t_i,t_k;\boldsymbol{P}^{2})\Big|_{\mathrm{self}}
+    &=-\mathrm{i}\,N\int_{\boldsymbol{q}}\int_{t_{j_1},t_{l_1}}\lambda_{cl}(t_i,t_{j_1};\boldsymbol{P}^{2})\,\lambda_{an}^{s}(t_{l_1},t_k;\boldsymbol{P}^{2})\nonumber\\[2ex]
+    &\hspace{1.2cm}\times\Big[\partial_{\tau}G^{R}(t_{j_1},t_{l_1};\boldsymbol{q})\,G^{A}(t_{l_1},t_{j_1};\boldsymbol{q}-\boldsymbol{P})\nonumber\\[2ex]
+    &\hspace{1.6cm}+\partial_{\tau}G^{A}(t_{l_1},t_{j_1};\boldsymbol{q})\,G^{R}(t_{j_1},t_{l_1};\boldsymbol{q}+\boldsymbol{P})\Big]\,.
+    \label{eq:lamcl-s-self}
+\end{align}
+This is the memory-carrying $s$-channel resummation and is the only contribution that survives at leading order in $1/N$.
 
-\subsubsection{Anomaly sector}
+Two subleading crossed groups survive collocation. In the first, $\lambda_{cl}$ is forced equal-time at the incoming endpoint:
+\begin{align}
+    \partial_{\tau}\lambda_{cl}(t_i,t_k;\boldsymbol{P}^{2})\Big|_{\mathrm{cross},A}
+    &=-2\mathrm{i}\int_{\boldsymbol{q}}\int_{t_{l_1}}\lambda_{an}^{s}(t_{l_1},t_k;\boldsymbol{P}^{2})\nonumber\\[2ex]
+    &\hspace{1.2cm}\times\Big[\lambda_{cl}\bigl(t_i,t_i;(\boldsymbol{P}/2-\boldsymbol{q})^{2}\bigr)\,\partial_{\tau}G^{R}(t_i,t_{l_1};\boldsymbol{q})\,G^{A}(t_{l_1},t_i;\boldsymbol{q}-\boldsymbol{P})\nonumber\\[2ex]
+    &\hspace{1.6cm}+\lambda_{cl}\bigl(t_i,t_i;(\boldsymbol{P}/2+\boldsymbol{q})^{2}\bigr)\,\partial_{\tau}G^{A}(t_{l_1},t_i;\boldsymbol{q})\,G^{R}(t_i,t_{l_1};\boldsymbol{q}+\boldsymbol{P})\Big]\,.
+    \label{eq:lamcl-s-A}
+\end{align}
+In the second, $\lambda_{an}^{t}$ is forced equal-time at the outgoing endpoint:
+\begin{align}
+    \partial_{\tau}\lambda_{cl}(t_i,t_k;\boldsymbol{P}^{2})\Big|_{\mathrm{cross},C}
+    &=-2\mathrm{i}\int_{\boldsymbol{q}}\int_{t_{j_1}}\lambda_{cl}(t_i,t_{j_1};\boldsymbol{P}^{2})\nonumber\\[2ex]
+    &\hspace{1.2cm}\times\Big[\lambda_{an}^{t}\bigl(t_k,t_k;(\boldsymbol{P}/2-\boldsymbol{q})^{2}\bigr)\,\partial_{\tau}G^{R}(t_{j_1},t_k;\boldsymbol{q})\,G^{A}(t_k,t_{j_1};\boldsymbol{q}-\boldsymbol{P})\nonumber\\[2ex]
+    &\hspace{1.6cm}+\lambda_{an}^{t}\bigl(t_k,t_k;(\boldsymbol{P}/2+\boldsymbol{q})^{2}\bigr)\,\partial_{\tau}G^{A}(t_k,t_{j_1};\boldsymbol{q})\,G^{R}(t_{j_1},t_k;\boldsymbol{q}+\boldsymbol{P})\Big]\,.
+    \label{eq:lamcl-s-C}
+\end{align}
+The remaining crossed $t$- and $u$-channel diagrams of \Cref{eq:4point-flow} produce equal-time $G^{R}$ or $G^{A}$ after \Cref{eq:time-slice} and drop by \Cref{eq:equal-time-RA}. The closed $s$-channel flow of this topology is therefore
+\begin{align}
+    \partial_{\tau}\lambda_{cl}(t_i,t_k;\boldsymbol{P}^{2})
+    =\partial_{\tau}\lambda_{cl}\Big|_{\mathrm{self}}
+    +\partial_{\tau}\lambda_{cl}\Big|_{\mathrm{cross},A}
+    +\partial_{\tau}\lambda_{cl}\Big|_{\mathrm{cross},C}\,.
+    \label{eq:lamcl-s-closed}
+\end{align}
+It depends only on the two endpoint times $(t_i,t_k)$ and on the single channel momentum $\boldsymbol{P}$, which is the input required by \Cref{eq:qc-final,eq:qq-final}. The same collocation applies to the $t$- and $u$-channel projections, and to the $qqqc$ and $qqcc$ flows, with the spectator times identified as in \Cref{eq:time-slice}.
 
-Since $\lambda_{an}$ vanishes in equilibrium, a practical hierarchy is to first solve the coupled system of $\lambda_{cl}$, $\lambda_{qu}$ and the two-point functions with $\lambda_{an}=0$, and only afterwards generate $\lambda_{an}^{s}$ and $\lambda_{an}^{t}$ from the right-hand side of \Cref{eq:4point-flow}. Full backcoupling of the anomaly dressings is required only if they grow to a size comparable with $\lambda_{cl}$.
-
+Optionally, the crossed dressings in \Cref{eq:lamcl-s-A,eq:lamcl-s-C} may be localized at vanishing momentum,
+\begin{align}
+    \lambda_{cl}\bigl(t_i,t_i;(\boldsymbol{P}/2\mp\boldsymbol{q})^{2}\bigr)\to\lambda_{cl}(t_i,t_i;0)\,,\qquad
+    \lambda_{an}^{t}\bigl(t_k,t_k;(\boldsymbol{P}/2\mp\boldsymbol{q})^{2}\bigr)\to\lambda_{an}^{t}(t_k,t_k;0)\,,
+    \label{eq:cross-local}
+\end{align}
+which matches the weight-$4$ equal-time, zero-momentum treatment of crossed bubbles. At large $N$ one may further retain only \Cref{eq:lamcl-s-self}.
 
 \hfill
 \bibliography{ref-lib}% Produces the bibliography via BibTeX.
