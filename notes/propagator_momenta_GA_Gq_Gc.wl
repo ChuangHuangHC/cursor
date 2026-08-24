@@ -126,7 +126,49 @@ mod7 = p3 + q;            (* Ag GA[p3+q] *)
 mod8 = p2 + q;            (* Ah GA[p2+q] *)
 mod9 = -p3 - p4 + q;      (* Al GA[-p3-p4+q] *)
 
-(* every single-point momentum -> first-seen representative *)
+(* 20+6+6 = 32 propagator momenta -> first 9 moduli *)
+GA32ToMod = {
+  GA[q] -> GA[mod1],
+  GA[p1 + p2 - q] -> GA[mod5],
+  GA[p1 + p3 - q] -> GA[mod1],
+  GA[p1 + p4 - q] -> GA[mod6],
+  GA[p3 + q] -> GA[mod7],
+  GA[-p1 - p2 + q] -> GA[mod5],
+  GA[p3 - q] -> GA[mod4],
+  GA[p4 + q] -> GA[mod2],
+  GA[p2 + q] -> GA[mod8],
+  GA[-p1 - p3 + q] -> GA[mod1],
+  GA[p2 - q] -> GA[mod2],
+  GA[-p1 - p4 + q] -> GA[mod6],
+  GA[p1 + q] -> GA[mod4],
+  GA[-p2 - p3 + q] -> GA[mod3],
+  GA[p1 - q] -> GA[mod7],
+  GA[-p2 - p4 + q] -> GA[mod1],
+  GA[-p3 - p4 + q] -> GA[mod9],
+  GA[p2 + p3 + q] -> GA[mod6],
+  GA[-p1 + q] -> GA[mod7],
+  GA[p2 + p4 + q] -> GA[mod1]
+};
+
+Gq32ToMod = {
+  Gq[i_, j_, q] -> Gq[i, j, mod1],
+  Gq[i_, j_, -p2 + q] -> Gq[i, j, mod2],
+  Gq[i_, j_, p1 + p4 + q] -> Gq[i, j, mod3],
+  Gq[i_, j_, p1 + q] -> Gq[i, j, mod4],
+  Gq[i_, j_, p1 + p3 + q] -> Gq[i, j, mod1],
+  Gq[i_, j_, -p3 + q] -> Gq[i, j, mod4]
+};
+
+Gc32ToMod = {
+  Gc[q] -> Gc[mod1],
+  Gc[-p2 + q] -> Gc[mod2],
+  Gc[p1 + p4 + q] -> Gc[mod3],
+  Gc[p1 + q] -> Gc[mod4],
+  Gc[p1 + p3 + q] -> Gc[mod1],
+  Gc[-p3 + q] -> Gc[mod4]
+};
+
+(* unique algebraic arguments -> first-seen representative *)
 allMomToFirst9 = {
   q -> mod1,
   -p2 + q -> mod2,

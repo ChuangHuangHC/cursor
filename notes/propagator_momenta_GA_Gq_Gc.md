@@ -21,13 +21,13 @@ Dressings depend on \(k^2\), so \(k\sim -k\) and Euclidean-equal vectors share o
 | **Gq** | `p, q, r` | 6 | **4** |
 | **Gc** | `a, b, c` | 6 | **4** (same set as Gq) |
 
-Union of as-written arguments: **24** (= 20 GA + 6 Gc/Gq − `{q, p1+q}`).
+Counted **by propagator** this is **20 + 6 + 6 = 32** momenta (GA and Gq/Gc share `q`, `p1+q` algebraically, so the unique-expression union is 24). Below every one of the 32 is rewritten by the first nine moduli.
 
 The 4 Gq/Gc labels are a subset of the 9 GA labels (`xq`, `xMp2Pq4`, `xPp1Pp4Pq4`, `xPp1Pq4`). GA uses all 9.
 
 ---
 
-## All 24 momenta rewritten by the first 9 moduli
+## All 32 momenta rewritten by the first 9 moduli
 
 4A kinematics: \(p_1=-p_3\), \(p_2=-p_4\). Independent quantity is \(|k|\). The first nine **new** moduli in appearance order are the representatives:
 
@@ -43,33 +43,53 @@ The 4 Gq/Gc labels are a subset of the 9 GA labels (`xq`, `xMp2Pq4`, `xPp1Pp4Pq4
 | 8 | `p2 + q` | Ah `GA[p2+q]` |
 | 9 | `-p3 - p4 + q` | Al `GA[-p3-p4+q]` |
 
-Every later argument equals one of these nine:
+The 32 propagator momenta (20 GA + 6 Gq + 6 Gc), each replaced by one of these nine:
+
+**GA (20)**
 
 ```
-q                 = 模1
--p2 + q           = 模2
-p1 + p4 + q       = 模3
-p1 + q            = 模4
-p1 + p3 + q       = 模1
--p3 + q           = 模4
-p1 + p2 - q       = 模5
-p1 + p3 - q       = 模1
-p1 + p4 - q       = 模6
-p3 + q            = 模7
--p1 - p2 + q      = 模5
-p3 - q            = 模4
-p4 + q            = 模2
-p2 + q            = 模8
--p1 - p3 + q      = 模1
-p2 - q            = 模2
--p1 - p4 + q      = 模6
--p2 - p3 + q      = 模3
-p1 - q            = 模7
--p2 - p4 + q      = 模1
--p3 - p4 + q      = 模9
-p2 + p3 + q       = 模6
--p1 + q           = 模7
-p2 + p4 + q       = 模1
+GA[q]                 ->  模1 = |q|
+GA[p1 + p2 - q]       ->  模5 = |p1 + p2 - q|
+GA[p1 + p3 - q]       ->  模1 = |q|
+GA[p1 + p4 - q]       ->  模6 = |p1 + p4 - q|
+GA[p3 + q]            ->  模7 = |p3 + q|
+GA[-p1 - p2 + q]      ->  模5 = |p1 + p2 - q|
+GA[p3 - q]            ->  模4 = |p1 + q|
+GA[p4 + q]            ->  模2 = |-p2 + q|
+GA[p2 + q]            ->  模8 = |p2 + q|
+GA[-p1 - p3 + q]      ->  模1 = |q|
+GA[p2 - q]            ->  模2 = |-p2 + q|
+GA[-p1 - p4 + q]      ->  模6 = |p1 + p4 - q|
+GA[p1 + q]            ->  模4 = |p1 + q|
+GA[-p2 - p3 + q]      ->  模3 = |p1 + p4 + q|
+GA[p1 - q]            ->  模7 = |p3 + q|
+GA[-p2 - p4 + q]      ->  模1 = |q|
+GA[-p3 - p4 + q]      ->  模9 = |-p3 - p4 + q|
+GA[p2 + p3 + q]       ->  模6 = |p1 + p4 - q|
+GA[-p1 + q]           ->  模7 = |p3 + q|
+GA[p2 + p4 + q]       ->  模1 = |q|
+```
+
+**Gq (6)**
+
+```
+Gq[..., q]                 ->  模1 = |q|
+Gq[..., -p2 + q]           ->  模2 = |-p2 + q|
+Gq[..., p1 + p4 + q]       ->  模3 = |p1 + p4 + q|
+Gq[..., p1 + q]            ->  模4 = |p1 + q|
+Gq[..., p1 + p3 + q]       ->  模1 = |q|
+Gq[..., -p3 + q]           ->  模4 = |p1 + q|
+```
+
+**Gc (6)**
+
+```
+Gc[q]                 ->  模1 = |q|
+Gc[-p2 + q]           ->  模2 = |-p2 + q|
+Gc[p1 + p4 + q]       ->  模3 = |p1 + p4 + q|
+Gc[p1 + q]            ->  模4 = |p1 + q|
+Gc[p1 + p3 + q]       ->  模1 = |q|
+Gc[-p3 + q]           ->  模4 = |p1 + q|
 ```
 
 Grouped by representative:
