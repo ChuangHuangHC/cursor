@@ -212,3 +212,53 @@ GARepl4 = {
   GA[-p1 + q] -> GA[xPp3Pq4],
   GA[p2 + p4 + q] -> GA[xq]
 };
+
+(* Dressing-function replacements for the 32 propagator momenta.
+   RHS = head + first-seen |k| label (xq, xMp2Pq4, ...).
+   dR* only on the q-line (regulator insertion). *)
+paraRepl = {
+   (*gluon prop*)
+   dRA[q] -> dRAxq,
+   ZA[q] -> ZAxq, RA[q] -> RAxq,
+   ZA[p1 + p2 - q] -> ZAxPp1Pp2Mq4, RA[p1 + p2 - q] -> RAxPp1Pp2Mq4,
+   ZA[p1 + p3 - q] -> ZAxq, RA[p1 + p3 - q] -> RAxq,
+   ZA[p1 + p4 - q] -> ZAxPp1Pp4Mq4, RA[p1 + p4 - q] -> RAxPp1Pp4Mq4,
+   ZA[p3 + q] -> ZAxPp3Pq4, RA[p3 + q] -> RAxPp3Pq4,
+   ZA[-p1 - p2 + q] -> ZAxPp1Pp2Mq4, RA[-p1 - p2 + q] -> RAxPp1Pp2Mq4,
+   ZA[p3 - q] -> ZAxPp1Pq4, RA[p3 - q] -> RAxPp1Pq4,
+   ZA[p4 + q] -> ZAxMp2Pq4, RA[p4 + q] -> RAxMp2Pq4,
+   ZA[p2 + q] -> ZAxPp2Pq4, RA[p2 + q] -> RAxPp2Pq4,
+   ZA[-p1 - p3 + q] -> ZAxq, RA[-p1 - p3 + q] -> RAxq,
+   ZA[p2 - q] -> ZAxMp2Pq4, RA[p2 - q] -> RAxMp2Pq4,
+   ZA[-p1 - p4 + q] -> ZAxPp1Pp4Mq4, RA[-p1 - p4 + q] -> RAxPp1Pp4Mq4,
+   ZA[p1 + q] -> ZAxPp1Pq4, RA[p1 + q] -> RAxPp1Pq4,
+   ZA[-p2 - p3 + q] -> ZAxPp1Pp4Pq4, RA[-p2 - p3 + q] -> RAxPp1Pp4Pq4,
+   ZA[p1 - q] -> ZAxPp3Pq4, RA[p1 - q] -> RAxPp3Pq4,
+   ZA[-p2 - p4 + q] -> ZAxq, RA[-p2 - p4 + q] -> RAxq,
+   ZA[-p3 - p4 + q] -> ZAxMp3Mp4Pq4, RA[-p3 - p4 + q] -> RAxMp3Mp4Pq4,
+   ZA[p2 + p3 + q] -> ZAxPp1Pp4Mq4, RA[p2 + p3 + q] -> RAxPp1Pp4Mq4,
+   ZA[-p1 + q] -> ZAxPp3Pq4, RA[-p1 + q] -> RAxPp3Pq4,
+   ZA[p2 + p4 + q] -> ZAxq, RA[p2 + p4 + q] -> RAxq,
+   
+   (*ghost prop*)
+   dRc[q] -> dRcxq,
+   Zc[q] -> Zcxq, Rc[q] -> Rcxq,
+   Zc[-p2 + q] -> ZcxMp2Pq4, Rc[-p2 + q] -> RcxMp2Pq4,
+   Zc[p1 + p4 + q] -> ZcxPp1Pp4Pq4, Rc[p1 + p4 + q] -> RcxPp1Pp4Pq4,
+   Zc[p1 + q] -> ZcxPp1Pq4, Rc[p1 + q] -> RcxPp1Pq4,
+   Zc[p1 + p3 + q] -> Zcxq, Rc[p1 + p3 + q] -> Rcxq,
+   Zc[-p3 + q] -> ZcxPp1Pq4, Rc[-p3 + q] -> RcxPp1Pq4,
+   
+   (*quark prop*)
+   dRq[q] -> dRqxq,
+   Zq[q] -> Zqxq, mq[q] -> mqxq, Rq[q] -> Rqxq,
+   Zq[-p2 + q] -> ZqxMp2Pq4, mq[-p2 + q] -> mqxMp2Pq4,
+   Rq[-p2 + q] -> RqxMp2Pq4,
+   Zq[p1 + p4 + q] -> ZqxPp1Pp4Pq4, mq[p1 + p4 + q] -> mqxPp1Pp4Pq4,
+   Rq[p1 + p4 + q] -> RqxPp1Pp4Pq4,
+   Zq[p1 + q] -> ZqxPp1Pq4, mq[p1 + q] -> mqxPp1Pq4, Rq[p1 + q] -> RqxPp1Pq4,
+   Zq[p1 + p3 + q] -> Zqxq, mq[p1 + p3 + q] -> mqxq, Rq[p1 + p3 + q] -> Rqxq,
+   Zq[-p3 + q] -> ZqxPp1Pq4, mq[-p3 + q] -> mqxPp1Pq4,
+   Rq[-p3 + q] -> RqxPp1Pq4
+   };
+paraRepl4 = paraRepl;
