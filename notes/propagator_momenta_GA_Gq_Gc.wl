@@ -115,6 +115,45 @@ GALabels4 = {
   xPp1Pp2Mq4, xPp1Pp4Mq4, xPp3Pq4, xPp2Pq4, xMp3Mp4Pq4
 };
 
+(* first 9 moduli in appearance order *)
+mod1 = q;                 (* Aa Gc[q] *)
+mod2 = -p2 + q;           (* Aa Gc[-p2+q] *)
+mod3 = p1 + p4 + q;       (* Aa Gc[p1+p4+q] *)
+mod4 = p1 + q;            (* Aa Gc[p1+q] *)
+mod5 = p1 + p2 - q;       (* Ad GA[p1+p2-q] *)
+mod6 = p1 + p4 - q;       (* Af GA[p1+p4-q] *)
+mod7 = p3 + q;            (* Ag GA[p3+q] *)
+mod8 = p2 + q;            (* Ah GA[p2+q] *)
+mod9 = -p3 - p4 + q;      (* Al GA[-p3-p4+q] *)
+
+(* every single-point momentum -> first-seen representative *)
+allMomToFirst9 = {
+  q -> mod1,
+  -p2 + q -> mod2,
+  p1 + p4 + q -> mod3,
+  p1 + q -> mod4,
+  p1 + p3 + q -> mod1,
+  -p3 + q -> mod4,
+  p1 + p2 - q -> mod5,
+  p1 + p3 - q -> mod1,
+  p1 + p4 - q -> mod6,
+  p3 + q -> mod7,
+  -p1 - p2 + q -> mod5,
+  p3 - q -> mod4,
+  p4 + q -> mod2,
+  p2 + q -> mod8,
+  -p1 - p3 + q -> mod1,
+  p2 - q -> mod2,
+  -p1 - p4 + q -> mod6,
+  -p2 - p3 + q -> mod3,
+  p1 - q -> mod7,
+  -p2 - p4 + q -> mod1,
+  -p3 - p4 + q -> mod9,
+  p2 + p3 + q -> mod6,
+  -p1 + q -> mod7,
+  p2 + p4 + q -> mod1
+};
+
 (* drop-in: replace propagator arguments by |k| labels *)
 GcRepl4 = {
   Gc[q] -> Gc[xq], dGc[q] -> dGc[xq],

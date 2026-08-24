@@ -23,16 +23,67 @@ Dressings depend on \(k^2\), so \(k\sim -k\) and Euclidean-equal vectors share o
 
 Union of as-written arguments: **24** (= 20 GA + 6 Gc/Gq − `{q, p1+q}`).
 
-The 4 Gq/Gc labels are a subset of the 9 GA labels:
+The 4 Gq/Gc labels are a subset of the 9 GA labels (`xq`, `xMp2Pq4`, `xPp1Pp4Pq4`, `xPp1Pq4`). GA uses all 9.
+
+---
+
+## All 24 momenta rewritten by the first 9 moduli
+
+4A kinematics: \(p_1=-p_3\), \(p_2=-p_4\). Independent quantity is \(|k|\). The first nine **new** moduli in appearance order are the representatives:
+
+| 模 | representative | first seen |
+|----|----------------|------------|
+| 1 | `q` | Aa `Gc[q]` |
+| 2 | `-p2 + q` | Aa `Gc[-p2+q]` |
+| 3 | `p1 + p4 + q` | Aa `Gc[p1+p4+q]` |
+| 4 | `p1 + q` | Aa `Gc[p1+q]` |
+| 5 | `p1 + p2 - q` | Ad `GA[p1+p2-q]` |
+| 6 | `p1 + p4 - q` | Af `GA[p1+p4-q]` |
+| 7 | `p3 + q` | Ag `GA[p3+q]` |
+| 8 | `p2 + q` | Ah `GA[p2+q]` |
+| 9 | `-p3 - p4 + q` | Al `GA[-p3-p4+q]` |
+
+Every later argument equals one of these nine:
 
 ```
-xq,  xMp2Pq4,  xPp1Pp4Pq4,  xPp1Pq4
+q                 = 模1
+-p2 + q           = 模2
+p1 + p4 + q       = 模3
+p1 + q            = 模4
+p1 + p3 + q       = 模1
+-p3 + q           = 模4
+p1 + p2 - q       = 模5
+p1 + p3 - q       = 模1
+p1 + p4 - q       = 模6
+p3 + q            = 模7
+-p1 - p2 + q      = 模5
+p3 - q            = 模4
+p4 + q            = 模2
+p2 + q            = 模8
+-p1 - p3 + q      = 模1
+p2 - q            = 模2
+-p1 - p4 + q      = 模6
+-p2 - p3 + q      = 模3
+p1 - q            = 模7
+-p2 - p4 + q      = 模1
+-p3 - p4 + q      = 模9
+p2 + p3 + q       = 模6
+-p1 + q           = 模7
+p2 + p4 + q       = 模1
 ```
 
-GA additionally needs
+Grouped by representative:
 
 ```
-xPp1Pp2Mq4,  xPp1Pp4Mq4,  xPp3Pq4,  xPp2Pq4,  xMp3Mp4Pq4
+模1  |q|            :  q,  p1+p3+q,  p1+p3-q,  -p1-p3+q,  -p2-p4+q,  p2+p4+q
+模2  |-p2+q|        :  -p2+q,  p4+q,  p2-q
+模3  |p1+p4+q|      :  p1+p4+q,  -p2-p3+q
+模4  |p1+q|         :  p1+q,  -p3+q,  p3-q
+模5  |p1+p2-q|      :  p1+p2-q,  -p1-p2+q
+模6  |p1+p4-q|      :  p1+p4-q,  -p1-p4+q,  p2+p3+q
+模7  |p3+q|         :  p3+q,  p1-q,  -p1+q
+模8  |p2+q|         :  p2+q
+模9  |-p3-p4+q|     :  -p3-p4+q
 ```
 
 ---
