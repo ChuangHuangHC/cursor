@@ -1,0 +1,191 @@
+Lambda4A / dLambda4A 单点动量（按 GA, Gq, Gc 分类）
+====================================================
+
+只提取传播子宗量。PiPerp、delta、顶点函数的动量不计入。
+dGA / dGq / dGc 的插在圈动量 q 上，下面不重复列出。
+
+
+一、按类型去重汇总
+------------------
+
+### GA（胶子，含 dGA 所在图上的其余 GA）
+
+书写原样（20 个）：
+
+  q
+  p1 + q,  p1 - q,  -p1 + q
+  p2 + q,  p2 - q
+  p3 + q,  p3 - q
+  p4 + q
+  p1 + p2 - q,  -p1 - p2 + q
+  p1 + p3 - q,  -p1 - p3 + q
+  p1 + p4 - q,  -p1 - p4 + q
+  -p2 - p3 + q
+  -p2 - p4 + q
+  -p3 - p4 + q
+  p2 + p3 + q
+  p2 + p4 + q
+
+若 GA(k) = GA(-k)（只依赖 k^2），独立动量 16 个：
+
+  q
+  p1 + q,  p1 - q          （-p1 + q 与 p1 - q 等价）
+  p2 + q,  p2 - q
+  p3 + q,  p3 - q
+  p4 + q
+  p1 + p2 - q              （-p1 - p2 + q 与之等价）
+  p1 + p3 - q
+  p1 + p4 - q
+  p2 + p3 - q              （来自 -p2 - p3 + q）
+  p2 + p4 - q
+  p3 + p4 - q
+  p2 + p3 + q
+  p2 + p4 + q
+
+### Gq（夸克；Dirac 结构保留符号，6 个）
+
+  q
+  -p2 + q
+  -p3 + q
+  p1 + q
+  p1 + p3 + q
+  p1 + p4 + q
+
+### Gc（鬼，6 个；与 Gq 拓扑相同）
+
+书写原样：
+
+  q
+  -p2 + q
+  -p3 + q
+  p1 + q
+  p1 + p3 + q
+  p1 + p4 + q
+
+若 Gc(k) = Gc(-k)，独立动量：
+
+  q
+  p1 + q
+  p2 - q                  （来自 -p2 + q）
+  p3 - q                  （来自 -p3 + q）
+  p1 + p3 + q
+  p1 + p4 + q
+
+
+二、按图展开
+------------
+
+### 4*ccA  鬼圈
+
+Lambda4Aa / dLambda4Aa
+  Gc :  q,  -p2 + q,  p1 + p4 + q,  p1 + q
+  dGc:  q
+
+Lambda4Ab / dLambda4Ab
+  Gc :  q,  -p2 + q,  p1 + p3 + q,  p1 + q
+  dGc:  q
+
+Lambda4Ac / dLambda4Ac
+  Gc :  q,  -p3 + q,  p1 + p4 + q,  p1 + q
+  dGc:  q
+
+### 2*4A  两条四胶子顶点
+
+Lambda4Ad / dLambda4Ad
+  GA :  q,  p1 + p2 - q
+  dGA:  q
+
+Lambda4Ae / dLambda4Ae
+  GA :  q,  p1 + p3 - q
+  dGA:  q
+
+Lambda4Af / dLambda4Af
+  GA :  q,  p1 + p4 - q
+  dGA:  q
+
+### 1*4A + 2*3A
+
+Lambda4Ag / dLambda4Ag1
+  GA :  q,  p3 + q,  -p1 - p2 + q
+  dGA:  q
+
+dLambda4Ag2          （调节子插在另一条内线）
+  GA :  p3 - q,  p4 + q
+  dGA:  q
+
+Lambda4Ah / dLambda4Ah1
+  GA :  q,  p2 + q,  -p1 - p3 + q
+  dGA:  q
+
+dLambda4Ah2
+  GA :  p2 - q,  p4 + q
+  dGA:  q
+
+Lambda4Ai / dLambda4Ai1
+  GA :  q,  p2 + q,  -p1 - p4 + q
+  dGA:  q
+
+dLambda4Ai2
+  GA :  p2 - q,  p3 + q
+  dGA:  q
+
+Lambda4Aj / dLambda4Aj1
+  GA :  q,  p1 + q,  -p2 - p3 + q
+  dGA:  q
+
+dLambda4Aj2
+  GA :  p1 - q,  p4 + q
+  dGA:  q
+
+Lambda4Ak / dLambda4Ak1
+  GA :  q,  p1 + q,  -p2 - p4 + q
+  dGA:  q
+
+dLambda4Ak2
+  GA :  p1 - q,  p3 + q
+  dGA:  q
+
+Lambda4Al / dLambda4Al1
+  GA :  q,  p1 + q,  -p3 - p4 + q
+  dGA:  q
+
+dLambda4Al2
+  GA :  p1 - q,  p2 + q
+  dGA:  q
+
+### 4*3A  四条三胶子顶点
+
+Lambda4Am / dLambda4Am
+  GA :  q,  p2 + q,  p2 + p3 + q,  -p1 + q
+  dGA:  q
+
+Lambda4An / dLambda4An
+  GA :  q,  p2 + q,  p2 + p4 + q,  -p1 + q
+  dGA:  q
+
+Lambda4Ao / dLambda4Ao
+  GA :  q,  p3 + q,  p2 + p3 + q,  -p1 + q
+  dGA:  q
+
+### 4*qqA  夸克圈
+
+Lambda4Ap / dLambda4Ap
+  Gq :  q,  -p2 + q,  p1 + p4 + q,  p1 + q
+  dGq:  q
+
+Lambda4Aq / dLambda4Aq
+  Gq :  q,  -p2 + q,  p1 + p3 + q,  p1 + q
+  dGq:  q
+
+Lambda4Ar / dLambda4Ar
+  Gq :  q,  -p3 + q,  p1 + p4 + q,  p1 + q
+  dGq:  q
+
+
+三、备注
+--------
+
+1. 鬼圈 4Aa–4Ac 与夸克圈 4Ap–4Ar 的圈动量路由相同，故 Gc 与 Gq 的动量集合一致。
+2. 所有 dLambda 的单圈导数都作用在动量为 q 的那条传播子上。
+3. dLambda4A{g,h,i,j,k,l}2 把调节子插到另一条内胶子线上，因此除 q 外还会出现
+   p_i - q 与 p_j + q 这类与对应 Lambda 不同的 GA 动量。
