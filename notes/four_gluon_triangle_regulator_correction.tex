@@ -1,0 +1,518 @@
+% Correction / replacement text for Hard QCD Note, Sec. 2.6 (Four-Gluon Vertex)
+% Issue: for the gluon-triangle topology (one A4 + two A3), the three internal
+% lines are NOT equivalent under regulator insertion.  The two A4--A3 lines are
+% related by a loop-momentum shift; the single A3--A3 line is inequivalent and
+% must be written as a separate flow diagram.
+%
+% Organisational principle of the note (unchanged):
+%   (i)  list all inequivalent external-leg distributions as Lambda diagrams;
+%   (ii) for the flow, write one representative per inequivalent regulator
+%        placement (with the regulated line carrying momentum q), collecting
+%        only placements related by loop-momentum reparameterisation into a
+%        multiplicity.
+% The original Sec. 2.6 incorrectly applied (ii) to the gluon triangles by using
+% a single representative times multiplicity 3.
+
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref}
+
+\title{Correction to the gluon-triangle flow\\ of the four-gluon vertex}
+\author{Hard QCD Note --- Sec.~2.6}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Organisational principle}
+
+The note builds every $\partial_t$ equation in two layers:
+
+\begin{enumerate}
+  \item \textbf{Topology + external-leg distribution.}
+        All one-loop graphs that contribute to a given $n$-point function are
+        classified by vertex content; within each class every inequivalent
+        assignment of the external legs to the loop is written once as a
+        $\Lambda$ diagram (no regulator).
+  \item \textbf{Regulator insertion.}
+        The flow $\partial\Lambda$ is obtained by putting $\otimes$ on one
+        internal line, always routed so that this line carries the loop
+        momentum $q$.  Insertions that differ only by a shift of $q$ are
+        \emph{not} written out; they are absorbed into a multiplicity in
+        $\partial_t\lambda$.  Insertions that change which vertices bound the
+        regulated line are inequivalent and must appear as separate diagrams
+        (cf.\ $\partial\Lambda^{\bar{c}cA}_{a_1,a_2,a_3}$ and
+        $\partial\Lambda^{\bar{c}cA}_{b_1,b_2,b_3}$).
+\end{enumerate}
+
+For the gluon triangle (one $A_4$ and two $A_3$) the three internal lines fall
+into two inequivalent classes:
+
+\begin{itemize}
+  \item two $A_4$--$A_3$ lines (related by $q\to -P+q$, where $P$ is the
+        total momentum through the $A_4$), multiplicity $2$;
+  \item one $A_3$--$A_3$ line, multiplicity $1$.
+\end{itemize}
+
+These two classes cannot be represented by a single $\partial\Lambda$ times $3$.
+The total triangle weight remains $2\times 6 + 1\times 6 = 18$, so the
+one-loop counting $24+3+18+12+24$ is unchanged; only the bookkeeping of the
+flow is corrected.
+
+\section{Replacement text (introductory paragraphs of Sec.~2.6)}
+
+Replace the paragraph that begins
+``for every class all inequivalent distributions\ldots'' by:
+
+\begin{quote}
+\small
+for every class all inequivalent distributions of the external legs over the
+loop are listed below, i.e.\ 3 ghost boxes, 3 gluon bubbles, 6 gluon
+triangles, 3 gluon boxes and 3 quark boxes. the remaining freedom, namely
+which internal line carries the regulator insertion and, for the ghost and
+quark loops, the orientation of the loop, is collected in the multiplicities
+of the flow equation whenever the insertions are related by a loop-momentum
+shift, exactly as for $\lambda_{3A}$. for the gluon triangle (one $A_4$ and
+two $A_3$), however, the insertion on an $A_4$--$A_3$ line is inequivalent to
+the insertion on the $A_3$--$A_3$ line: the former are written as
+$\partial\Lambda^{4A}_{g_1,\ldots,l_1}$ with multiplicity $2$, the latter as
+$\partial\Lambda^{4A}_{g_2,\ldots,l_2}$ with multiplicity $1$.
+\end{quote}
+
+\section{Replacement text (start of the flow)}
+
+Replace the sentence that introduces~\eqref{eq:replace-rule} / original~(112)
+by:
+
+\begin{quote}
+\small
+now turn to the flow equation. the regulator insertion $\otimes$ is put on
+the internal line carrying the loop momentum $q$, i.e.\
+$(\partial\Lambda^{4A}_{x})$ is obtained from $(\Lambda^{4A}_{x})$ by the
+replacement of the propagator of that line by its $\tilde{\partial}_t$
+derivative,
+\begin{equation}
+  G_c(q)\to\mathrm{d}G_c(q),\qquad
+  \Pi^\perp(q)\,G_A(q)\to\Pi^\perp(q)\,\mathrm{d}G_A(q),\qquad
+  G_q(q)\to\mathrm{d}G_q(q),
+  \label{eq:replace-rule}
+\end{equation}
+all other propagators being unchanged. for the gluon triangles the two
+inequivalent choices of that line are written separately below
+($x=g_1,\ldots,l_1$ for an $A_4$--$A_3$ line and $x=g_2,\ldots,l_2$ for the
+$A_3$--$A_3$ line); in each case the loop momentum is routed so that the
+regulated line carries momentum $q$.
+\end{quote}
+
+\section{Gluon-triangle flow diagrams}
+
+\noindent
+\textbf{Notation.}
+The diagrams $\partial\Lambda^{4A}_{g_1},\ldots,\partial\Lambda^{4A}_{l_1}$
+coincide with the original
+$\partial\Lambda^{4A}_{g},\ldots,\partial\Lambda^{4A}_{l}$
+(regulator on the $A_4$--$A_3$ line of momentum $q$).
+They are repeated here only to fix the subscript convention.
+The new diagrams are $\partial\Lambda^{4A}_{g_2},\ldots,\partial\Lambda^{4A}_{l_2}$.
+
+\subsection{$A_4$--$A_3$ insertion (multiplicity 2)}
+
+%----- g1 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{g_1}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_1,p_2,-q,-p_1-p_2+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{a\mu\,b\nu\,b_1\nu_1\,a_1\mu_1}(p_1,p_2,-q,-p_1-p_2+q)
+\nonumber\\
+&\qquad\times
+\delta^{b_1c_2}\Pi^\perp_{\nu_1\rho_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_3,-p_3-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{c\rho\,c_1\rho_1\,c_2\rho_2}(p_3,-p_3-q,q)
+\times
+\delta^{c_1d_2}\Pi^\perp_{\rho_1\sigma_2}(p_3+q)\,G_A(p_3+q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_4,p_1+p_2-q,p_3+q)
+\bigl(S^{(3)}_{A_3}\bigr)^{d\sigma\,d_1\sigma_1\,d_2\sigma_2}(p_4,p_1+p_2-q,p_3+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1a_1}\Pi^\perp_{\sigma_1\mu_1}(-p_1-p_2+q)\,G_A(-p_1-p_2+q)\,.
+\label{eq:dLam-g1}
+\end{align}
+
+%----- h1 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{h_1}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_1,p_3,-q,-p_1-p_3+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{a\mu\,c\rho\,c_1\rho_1\,a_1\mu_1}(p_1,p_3,-q,-p_1-p_3+q)
+\nonumber\\
+&\qquad\times
+\delta^{c_1b_2}\Pi^\perp_{\rho_1\nu_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_2,-p_2-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{b\nu\,b_1\nu_1\,b_2\nu_2}(p_2,-p_2-q,q)
+\times
+\delta^{b_1d_2}\Pi^\perp_{\nu_1\sigma_2}(p_2+q)\,G_A(p_2+q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_4,p_1+p_3-q,p_2+q)
+\bigl(S^{(3)}_{A_3}\bigr)^{d\sigma\,d_1\sigma_1\,d_2\sigma_2}(p_4,p_1+p_3-q,p_2+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1a_1}\Pi^\perp_{\sigma_1\mu_1}(-p_1-p_3+q)\,G_A(-p_1-p_3+q)\,.
+\label{eq:dLam-h1}
+\end{align}
+
+%----- i1 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{i_1}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_1,p_4,-q,-p_1-p_4+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{a\mu\,d\sigma\,d_1\sigma_1\,a_1\mu_1}(p_1,p_4,-q,-p_1-p_4+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1b_2}\Pi^\perp_{\sigma_1\nu_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_2,-p_2-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{b\nu\,b_1\nu_1\,b_2\nu_2}(p_2,-p_2-q,q)
+\times
+\delta^{b_1c_2}\Pi^\perp_{\nu_1\rho_2}(p_2+q)\,G_A(p_2+q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_3,p_1+p_4-q,p_2+q)
+\bigl(S^{(3)}_{A_3}\bigr)^{c\rho\,c_1\rho_1\,c_2\rho_2}(p_3,p_1+p_4-q,p_2+q)
+\nonumber\\
+&\qquad\times
+\delta^{c_1a_1}\Pi^\perp_{\rho_1\mu_1}(-p_1-p_4+q)\,G_A(-p_1-p_4+q)\,.
+\label{eq:dLam-i1}
+\end{align}
+
+%----- j1 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{j_1}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_2,p_3,-q,-p_2-p_3+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{b\nu\,c\rho\,c_1\rho_1\,b_1\nu_1}(p_2,p_3,-q,-p_2-p_3+q)
+\nonumber\\
+&\qquad\times
+\delta^{c_1a_2}\Pi^\perp_{\rho_1\mu_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_1,-p_1-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{a\mu\,a_1\mu_1\,a_2\mu_2}(p_1,-p_1-q,q)
+\times
+\delta^{a_1d_2}\Pi^\perp_{\mu_1\sigma_2}(p_1+q)\,G_A(p_1+q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_4,p_2+p_3-q,p_1+q)
+\bigl(S^{(3)}_{A_3}\bigr)^{d\sigma\,d_1\sigma_1\,d_2\sigma_2}(p_4,p_2+p_3-q,p_1+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1b_1}\Pi^\perp_{\sigma_1\nu_1}(-p_2-p_3+q)\,G_A(-p_2-p_3+q)\,.
+\label{eq:dLam-j1}
+\end{align}
+
+%----- k1 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{k_1}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_2,p_4,-q,-p_2-p_4+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{b\nu\,d\sigma\,d_1\sigma_1\,b_1\nu_1}(p_2,p_4,-q,-p_2-p_4+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1a_2}\Pi^\perp_{\sigma_1\mu_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_1,-p_1-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{a\mu\,a_1\mu_1\,a_2\mu_2}(p_1,-p_1-q,q)
+\times
+\delta^{a_1c_2}\Pi^\perp_{\mu_1\rho_2}(p_1+q)\,G_A(p_1+q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_3,p_2+p_4-q,p_1+q)
+\bigl(S^{(3)}_{A_3}\bigr)^{c\rho\,c_1\rho_1\,c_2\rho_2}(p_3,p_2+p_4-q,p_1+q)
+\nonumber\\
+&\qquad\times
+\delta^{c_1b_1}\Pi^\perp_{\rho_1\nu_1}(-p_2-p_4+q)\,G_A(-p_2-p_4+q)\,.
+\label{eq:dLam-k1}
+\end{align}
+
+%----- l1 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{l_1}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_3,p_4,-q,-p_3-p_4+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{c\rho\,d\sigma\,d_1\sigma_1\,c_1\rho_1}(p_3,p_4,-q,-p_3-p_4+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1a_2}\Pi^\perp_{\sigma_1\mu_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_1,-p_1-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{a\mu\,a_1\mu_1\,a_2\mu_2}(p_1,-p_1-q,q)
+\times
+\delta^{a_1b_2}\Pi^\perp_{\mu_1\nu_2}(p_1+q)\,G_A(p_1+q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_2,p_3+p_4-q,p_1+q)
+\bigl(S^{(3)}_{A_3}\bigr)^{b\nu\,b_1\nu_1\,b_2\nu_2}(p_2,p_3+p_4-q,p_1+q)
+\nonumber\\
+&\qquad\times
+\delta^{b_1c_1}\Pi^\perp_{\nu_1\rho_1}(-p_3-p_4+q)\,G_A(-p_3-p_4+q)\,.
+\label{eq:dLam-l1}
+\end{align}
+
+\subsection{$A_3$--$A_3$ insertion (multiplicity 1)}
+
+The loop momentum is shifted so that the regulated $A_3$--$A_3$ line carries
+momentum $q$.  Momentum conservation $p_1+p_2+p_3+p_4=0$ is used freely.
+
+%----- g2 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{g_2}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_1,p_2,p_3-q,p_4+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{a\mu\,b\nu\,b_1\nu_1\,a_1\mu_1}(p_1,p_2,p_3-q,p_4+q)
+\nonumber\\
+&\qquad\times
+\delta^{b_1c_2}\Pi^\perp_{\nu_1\rho_2}(p_3-q)\,G_A(p_3-q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_3,-q,q-p_3)
+\bigl(S^{(3)}_{A_3}\bigr)^{c\rho\,c_1\rho_1\,c_2\rho_2}(p_3,-q,q-p_3)
+\times
+\delta^{c_1d_2}\Pi^\perp_{\rho_1\sigma_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_4,-p_4-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{d\sigma\,d_1\sigma_1\,d_2\sigma_2}(p_4,-p_4-q,q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1a_1}\Pi^\perp_{\sigma_1\mu_1}(p_4+q)\,G_A(p_4+q)\,.
+\label{eq:dLam-g2}
+\end{align}
+
+%----- h2 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{h_2}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_1,p_3,p_2-q,p_4+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{a\mu\,c\rho\,c_1\rho_1\,a_1\mu_1}(p_1,p_3,p_2-q,p_4+q)
+\nonumber\\
+&\qquad\times
+\delta^{c_1b_2}\Pi^\perp_{\rho_1\nu_2}(p_2-q)\,G_A(p_2-q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_2,-q,q-p_2)
+\bigl(S^{(3)}_{A_3}\bigr)^{b\nu\,b_1\nu_1\,b_2\nu_2}(p_2,-q,q-p_2)
+\times
+\delta^{b_1d_2}\Pi^\perp_{\nu_1\sigma_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_4,-p_4-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{d\sigma\,d_1\sigma_1\,d_2\sigma_2}(p_4,-p_4-q,q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1a_1}\Pi^\perp_{\sigma_1\mu_1}(p_4+q)\,G_A(p_4+q)\,.
+\label{eq:dLam-h2}
+\end{align}
+
+%----- i2 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{i_2}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_1,p_4,p_2-q,p_3+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{a\mu\,d\sigma\,d_1\sigma_1\,a_1\mu_1}(p_1,p_4,p_2-q,p_3+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1b_2}\Pi^\perp_{\sigma_1\nu_2}(p_2-q)\,G_A(p_2-q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_2,-q,q-p_2)
+\bigl(S^{(3)}_{A_3}\bigr)^{b\nu\,b_1\nu_1\,b_2\nu_2}(p_2,-q,q-p_2)
+\times
+\delta^{b_1c_2}\Pi^\perp_{\nu_1\rho_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_3,-p_3-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{c\rho\,c_1\rho_1\,c_2\rho_2}(p_3,-p_3-q,q)
+\nonumber\\
+&\qquad\times
+\delta^{c_1a_1}\Pi^\perp_{\rho_1\mu_1}(p_3+q)\,G_A(p_3+q)\,.
+\label{eq:dLam-i2}
+\end{align}
+
+%----- j2 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{j_2}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_2,p_3,p_1-q,p_4+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{b\nu\,c\rho\,c_1\rho_1\,b_1\nu_1}(p_2,p_3,p_1-q,p_4+q)
+\nonumber\\
+&\qquad\times
+\delta^{c_1a_2}\Pi^\perp_{\rho_1\mu_2}(p_1-q)\,G_A(p_1-q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_1,-q,q-p_1)
+\bigl(S^{(3)}_{A_3}\bigr)^{a\mu\,a_1\mu_1\,a_2\mu_2}(p_1,-q,q-p_1)
+\times
+\delta^{a_1d_2}\Pi^\perp_{\mu_1\sigma_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_4,-p_4-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{d\sigma\,d_1\sigma_1\,d_2\sigma_2}(p_4,-p_4-q,q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1b_1}\Pi^\perp_{\sigma_1\nu_1}(p_4+q)\,G_A(p_4+q)\,.
+\label{eq:dLam-j2}
+\end{align}
+
+%----- k2 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{k_2}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_2,p_4,p_1-q,p_3+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{b\nu\,d\sigma\,d_1\sigma_1\,b_1\nu_1}(p_2,p_4,p_1-q,p_3+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1a_2}\Pi^\perp_{\sigma_1\mu_2}(p_1-q)\,G_A(p_1-q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_1,-q,q-p_1)
+\bigl(S^{(3)}_{A_3}\bigr)^{a\mu\,a_1\mu_1\,a_2\mu_2}(p_1,-q,q-p_1)
+\times
+\delta^{a_1c_2}\Pi^\perp_{\mu_1\rho_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_3,-p_3-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{c\rho\,c_1\rho_1\,c_2\rho_2}(p_3,-p_3-q,q)
+\nonumber\\
+&\qquad\times
+\delta^{c_1b_1}\Pi^\perp_{\rho_1\nu_1}(p_3+q)\,G_A(p_3+q)\,.
+\label{eq:dLam-k2}
+\end{align}
+
+%----- l2 -----
+\begin{align}
+&\bigl(\partial\Lambda^{4A}_{l_2}\bigr)^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad=
+\int\frac{\mathrm{d}^4q}{(2\pi)^4}\,
+(-\lambda_{4A})(p_3,p_4,p_1-q,p_2+q)
+\bigl(S^{(4)}_{A_4}\bigr)^{c\rho\,d\sigma\,d_1\sigma_1\,c_1\rho_1}(p_3,p_4,p_1-q,p_2+q)
+\nonumber\\
+&\qquad\times
+\delta^{d_1a_2}\Pi^\perp_{\sigma_1\mu_2}(p_1-q)\,G_A(p_1-q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_1,-q,q-p_1)
+\bigl(S^{(3)}_{A_3}\bigr)^{a\mu\,a_1\mu_1\,a_2\mu_2}(p_1,-q,q-p_1)
+\times
+\delta^{a_1b_2}\Pi^\perp_{\mu_1\nu_2}(q)\,\mathrm{d}G_A(q)
+\nonumber\\
+&\qquad\times
+(-\lambda_{3A})(p_2,-p_2-q,q)
+\bigl(S^{(3)}_{A_3}\bigr)^{b\nu\,b_1\nu_1\,b_2\nu_2}(p_2,-p_2-q,q)
+\nonumber\\
+&\qquad\times
+\delta^{b_1c_1}\Pi^\perp_{\nu_1\rho_1}(p_2+q)\,G_A(p_2+q)\,.
+\label{eq:dLam-l2}
+\end{align}
+
+\section{Replacement of the flow of $\lambda_{4A}$}
+
+Replace the original flow equation~(131) and the multiplicity paragraph by:
+
+\begin{align}
+\partial_t\lambda_{4A}(p_1,p_2,p_3,p_4)
+&=
+\frac{1}{C_{4A}}
+\Bigg[
+8\cdot\bigl(\partial\Lambda^{4A}_{a}+\partial\Lambda^{4A}_{b}+\partial\Lambda^{4A}_{c}\bigr)
+\nonumber\\
+&\qquad
++2\cdot\bigl(\partial\Lambda^{4A}_{d}+\partial\Lambda^{4A}_{e}+\partial\Lambda^{4A}_{f}\bigr)
+\nonumber\\
+&\qquad
++2\cdot\bigl(\partial\Lambda^{4A}_{g_1}+\partial\Lambda^{4A}_{h_1}+\partial\Lambda^{4A}_{i_1}
+           +\partial\Lambda^{4A}_{j_1}+\partial\Lambda^{4A}_{k_1}+\partial\Lambda^{4A}_{l_1}\bigr)
+\nonumber\\
+&\qquad
++1\cdot\bigl(\partial\Lambda^{4A}_{g_2}+\partial\Lambda^{4A}_{h_2}+\partial\Lambda^{4A}_{i_2}
+           +\partial\Lambda^{4A}_{j_2}+\partial\Lambda^{4A}_{k_2}+\partial\Lambda^{4A}_{l_2}\bigr)
+\nonumber\\
+&\qquad
++4\cdot\bigl(\partial\Lambda^{4A}_{m}+\partial\Lambda^{4A}_{n}+\partial\Lambda^{4A}_{o}\bigr)
+\nonumber\\
+&\qquad
++8\cdot\bigl(\partial\Lambda^{4A}_{p}+\partial\Lambda^{4A}_{q}+\partial\Lambda^{4A}_{r}\bigr)
+\Bigg]^{a\mu\,b\nu\,c\rho\,d\sigma}(p_1,p_2,p_3,p_4)
+\nonumber\\
+&\quad\times
+\Pi^\perp_{\mu\mu'}(p_1)\Pi^\perp_{\nu\nu'}(p_2)\Pi^\perp_{\rho\rho'}(p_3)\Pi^\perp_{\sigma\sigma'}(p_4)
+\bigl(S^{(4)}_{A_4}\bigr)^{a\mu'\,b\nu'\,c\rho'\,d\sigma'}(p_1,p_2,p_3,p_4)\,.
+\label{eq:flow-lambda4A}
+\end{align}
+
+\begin{quote}
+\small
+the multiplicities follow the same counting as for $\lambda_{3A}$, with one
+refinement for the gluon triangles. for the ghost and quark boxes
+$8=4\times 2$ (4 positions of the insertion $\times$ 2 loop orientations),
+for the gluon bubbles $2$ (the two internal lines, on top of the symmetry
+factor $\tfrac12$), for the gluon boxes $4$ (positions of the insertion). for
+the gluon triangles the three internal lines split into two inequivalent
+classes: multiplicity $2$ for the $A_4$--$A_3$ insertion
+($\partial\Lambda^{4A}_{g_1,\ldots,l_1}$) and multiplicity $1$ for the
+$A_3$--$A_3$ insertion ($\partial\Lambda^{4A}_{g_2,\ldots,l_2}$). the total
+weights $24+3+18+12+24$ then reproduce the full one-loop content of
+$\partial_t\Gamma^{(4)A_4}_{k}$.
+\end{quote}
+
+\section*{Summary of the change}
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+ & original & corrected \\
+\hline
+triangle representative & one ($\partial\Lambda_{g,\ldots,l}$) & two ($g_1{\ldots}l_1$ and $g_2{\ldots}l_2$) \\
+multiplicity & $3$ & $2+1$ \\
+total triangle weight & $3\times 6=18$ & $2\times 6+1\times 6=18$ \\
+\hline
+\end{tabular}
+\end{center}
+
+The projection of $\lambda_{4A}$ from the undifferentiated diagrams
+$\Lambda^{4A}_{a}+\cdots+\Lambda^{4A}_{r}$ is unchanged: those diagrams do not
+involve a regulator insertion.
+
+\end{document}
