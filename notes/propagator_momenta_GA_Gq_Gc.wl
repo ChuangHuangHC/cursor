@@ -115,85 +115,60 @@ GALabels4 = {
   xPp1Pp2Mq4, xPp1Pp4Mq4, xPp3Pq4, xPp2Pq4, xMp3Mp4Pq4
 };
 
-(* first 9 moduli in appearance order *)
-mod1 = q;                 (* Aa Gc[q] *)
-mod2 = -p2 + q;           (* Aa Gc[-p2+q] *)
-mod3 = p1 + p4 + q;       (* Aa Gc[p1+p4+q] *)
-mod4 = p1 + q;            (* Aa Gc[p1+q] *)
-mod5 = p1 + p2 - q;       (* Ad GA[p1+p2-q] *)
-mod6 = p1 + p4 - q;       (* Af GA[p1+p4-q] *)
-mod7 = p3 + q;            (* Ag GA[p3+q] *)
-mod8 = p2 + q;            (* Ah GA[p2+q] *)
-mod9 = -p3 - p4 + q;      (* Al GA[-p3-p4+q] *)
+(* first 9 moduli in appearance order:
+   q -> xq
+   -p2 + q -> xMp2Pq4
+   p1 + p4 + q -> xPp1Pp4Pq4
+   p1 + q -> xPp1Pq4
+   p1 + p2 - q -> xPp1Pp2Mq4
+   p1 + p4 - q -> xPp1Pp4Mq4
+   p3 + q -> xPp3Pq4
+   p2 + q -> xPp2Pq4
+   -p3 - p4 + q -> xMp3Mp4Pq4
+*)
 
-(* 20+6+6 = 32 propagator momenta -> first 9 moduli *)
-GA32ToMod = {
-  GA[q] -> GA[mod1],
-  GA[p1 + p2 - q] -> GA[mod5],
-  GA[p1 + p3 - q] -> GA[mod1],
-  GA[p1 + p4 - q] -> GA[mod6],
-  GA[p3 + q] -> GA[mod7],
-  GA[-p1 - p2 + q] -> GA[mod5],
-  GA[p3 - q] -> GA[mod4],
-  GA[p4 + q] -> GA[mod2],
-  GA[p2 + q] -> GA[mod8],
-  GA[-p1 - p3 + q] -> GA[mod1],
-  GA[p2 - q] -> GA[mod2],
-  GA[-p1 - p4 + q] -> GA[mod6],
-  GA[p1 + q] -> GA[mod4],
-  GA[-p2 - p3 + q] -> GA[mod3],
-  GA[p1 - q] -> GA[mod7],
-  GA[-p2 - p4 + q] -> GA[mod1],
-  GA[-p3 - p4 + q] -> GA[mod9],
-  GA[p2 + p3 + q] -> GA[mod6],
-  GA[-p1 + q] -> GA[mod7],
-  GA[p2 + p4 + q] -> GA[mod1]
+(* 20 GA momenta *)
+GAMomRepl4 = {
+  q -> xq,
+  p1 + p2 - q -> xPp1Pp2Mq4,
+  p1 + p3 - q -> xq,
+  p1 + p4 - q -> xPp1Pp4Mq4,
+  p3 + q -> xPp3Pq4,
+  -p1 - p2 + q -> xPp1Pp2Mq4,
+  p3 - q -> xPp1Pq4,
+  p4 + q -> xMp2Pq4,
+  p2 + q -> xPp2Pq4,
+  -p1 - p3 + q -> xq,
+  p2 - q -> xMp2Pq4,
+  -p1 - p4 + q -> xPp1Pp4Mq4,
+  p1 + q -> xPp1Pq4,
+  -p2 - p3 + q -> xPp1Pp4Pq4,
+  p1 - q -> xPp3Pq4,
+  -p2 - p4 + q -> xq,
+  -p3 - p4 + q -> xMp3Mp4Pq4,
+  p2 + p3 + q -> xPp1Pp4Mq4,
+  -p1 + q -> xPp3Pq4,
+  p2 + p4 + q -> xq
 };
 
-Gq32ToMod = {
-  Gq[i_, j_, q] -> Gq[i, j, mod1],
-  Gq[i_, j_, -p2 + q] -> Gq[i, j, mod2],
-  Gq[i_, j_, p1 + p4 + q] -> Gq[i, j, mod3],
-  Gq[i_, j_, p1 + q] -> Gq[i, j, mod4],
-  Gq[i_, j_, p1 + p3 + q] -> Gq[i, j, mod1],
-  Gq[i_, j_, -p3 + q] -> Gq[i, j, mod4]
+(* 6 Gq momenta *)
+GqMomRepl4 = {
+  q -> xq,
+  -p2 + q -> xMp2Pq4,
+  p1 + p4 + q -> xPp1Pp4Pq4,
+  p1 + q -> xPp1Pq4,
+  p1 + p3 + q -> xq,
+  -p3 + q -> xPp1Pq4
 };
 
-Gc32ToMod = {
-  Gc[q] -> Gc[mod1],
-  Gc[-p2 + q] -> Gc[mod2],
-  Gc[p1 + p4 + q] -> Gc[mod3],
-  Gc[p1 + q] -> Gc[mod4],
-  Gc[p1 + p3 + q] -> Gc[mod1],
-  Gc[-p3 + q] -> Gc[mod4]
-};
-
-(* unique algebraic arguments -> first-seen representative *)
-allMomToFirst9 = {
-  q -> mod1,
-  -p2 + q -> mod2,
-  p1 + p4 + q -> mod3,
-  p1 + q -> mod4,
-  p1 + p3 + q -> mod1,
-  -p3 + q -> mod4,
-  p1 + p2 - q -> mod5,
-  p1 + p3 - q -> mod1,
-  p1 + p4 - q -> mod6,
-  p3 + q -> mod7,
-  -p1 - p2 + q -> mod5,
-  p3 - q -> mod4,
-  p4 + q -> mod2,
-  p2 + q -> mod8,
-  -p1 - p3 + q -> mod1,
-  p2 - q -> mod2,
-  -p1 - p4 + q -> mod6,
-  -p2 - p3 + q -> mod3,
-  p1 - q -> mod7,
-  -p2 - p4 + q -> mod1,
-  -p3 - p4 + q -> mod9,
-  p2 + p3 + q -> mod6,
-  -p1 + q -> mod7,
-  p2 + p4 + q -> mod1
+(* 6 Gc momenta *)
+GcMomRepl4 = {
+  q -> xq,
+  -p2 + q -> xMp2Pq4,
+  p1 + p4 + q -> xPp1Pp4Pq4,
+  p1 + q -> xPp1Pq4,
+  p1 + p3 + q -> xq,
+  -p3 + q -> xPp1Pq4
 };
 
 (* drop-in: replace propagator arguments by |k| labels *)

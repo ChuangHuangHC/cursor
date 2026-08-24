@@ -29,81 +29,81 @@ The 4 Gq/Gc labels are a subset of the 9 GA labels (`xq`, `xMp2Pq4`, `xPp1Pp4Pq4
 
 ## All 32 momenta rewritten by the first 9 moduli
 
-4A kinematics: \(p_1=-p_3\), \(p_2=-p_4\). Independent quantity is \(|k|\). The first nine **new** moduli in appearance order are the representatives:
+4A kinematics: \(p_1=-p_3\), \(p_2=-p_4\). Independent quantity is \(|k|\). Naming: `q -> xq`; otherwise `x` then `P`/`M` for each \(\pm\) term, then trailing `4`. First nine **new** moduli in appearance order:
 
-| 模 | representative | first seen |
-|----|----------------|------------|
-| 1 | `q` | Aa `Gc[q]` |
-| 2 | `-p2 + q` | Aa `Gc[-p2+q]` |
-| 3 | `p1 + p4 + q` | Aa `Gc[p1+p4+q]` |
-| 4 | `p1 + q` | Aa `Gc[p1+q]` |
-| 5 | `p1 + p2 - q` | Ad `GA[p1+p2-q]` |
-| 6 | `p1 + p4 - q` | Af `GA[p1+p4-q]` |
-| 7 | `p3 + q` | Ag `GA[p3+q]` |
-| 8 | `p2 + q` | Ah `GA[p2+q]` |
-| 9 | `-p3 - p4 + q` | Al `GA[-p3-p4+q]` |
+```
+q -> xq
+-p2 + q -> xMp2Pq4
+p1 + p4 + q -> xPp1Pp4Pq4
+p1 + q -> xPp1Pq4
+p1 + p2 - q -> xPp1Pp2Mq4
+p1 + p4 - q -> xPp1Pp4Mq4
+p3 + q -> xPp3Pq4
+p2 + q -> xPp2Pq4
+-p3 - p4 + q -> xMp3Mp4Pq4
+```
 
-The 32 propagator momenta (20 GA + 6 Gq + 6 Gc), each replaced by one of these nine:
+The 32 propagator momenta (20 GA + 6 Gq + 6 Gc) mapped onto those nine:
 
 **GA (20)**
 
 ```
-GA[q]                 ->  模1 = |q|
-GA[p1 + p2 - q]       ->  模5 = |p1 + p2 - q|
-GA[p1 + p3 - q]       ->  模1 = |q|
-GA[p1 + p4 - q]       ->  模6 = |p1 + p4 - q|
-GA[p3 + q]            ->  模7 = |p3 + q|
-GA[-p1 - p2 + q]      ->  模5 = |p1 + p2 - q|
-GA[p3 - q]            ->  模4 = |p1 + q|
-GA[p4 + q]            ->  模2 = |-p2 + q|
-GA[p2 + q]            ->  模8 = |p2 + q|
-GA[-p1 - p3 + q]      ->  模1 = |q|
-GA[p2 - q]            ->  模2 = |-p2 + q|
-GA[-p1 - p4 + q]      ->  模6 = |p1 + p4 - q|
-GA[p1 + q]            ->  模4 = |p1 + q|
-GA[-p2 - p3 + q]      ->  模3 = |p1 + p4 + q|
-GA[p1 - q]            ->  模7 = |p3 + q|
-GA[-p2 - p4 + q]      ->  模1 = |q|
-GA[-p3 - p4 + q]      ->  模9 = |-p3 - p4 + q|
-GA[p2 + p3 + q]       ->  模6 = |p1 + p4 - q|
-GA[-p1 + q]           ->  模7 = |p3 + q|
-GA[p2 + p4 + q]       ->  模1 = |q|
+q -> xq
+p1 + p2 - q -> xPp1Pp2Mq4
+p1 + p3 - q -> xq
+p1 + p4 - q -> xPp1Pp4Mq4
+p3 + q -> xPp3Pq4
+-p1 - p2 + q -> xPp1Pp2Mq4
+p3 - q -> xPp1Pq4
+p4 + q -> xMp2Pq4
+p2 + q -> xPp2Pq4
+-p1 - p3 + q -> xq
+p2 - q -> xMp2Pq4
+-p1 - p4 + q -> xPp1Pp4Mq4
+p1 + q -> xPp1Pq4
+-p2 - p3 + q -> xPp1Pp4Pq4
+p1 - q -> xPp3Pq4
+-p2 - p4 + q -> xq
+-p3 - p4 + q -> xMp3Mp4Pq4
+p2 + p3 + q -> xPp1Pp4Mq4
+-p1 + q -> xPp3Pq4
+p2 + p4 + q -> xq
 ```
 
 **Gq (6)**
 
 ```
-Gq[..., q]                 ->  模1 = |q|
-Gq[..., -p2 + q]           ->  模2 = |-p2 + q|
-Gq[..., p1 + p4 + q]       ->  模3 = |p1 + p4 + q|
-Gq[..., p1 + q]            ->  模4 = |p1 + q|
-Gq[..., p1 + p3 + q]       ->  模1 = |q|
-Gq[..., -p3 + q]           ->  模4 = |p1 + q|
+q -> xq
+-p2 + q -> xMp2Pq4
+p1 + p4 + q -> xPp1Pp4Pq4
+p1 + q -> xPp1Pq4
+p1 + p3 + q -> xq
+-p3 + q -> xPp1Pq4
 ```
 
 **Gc (6)**
 
 ```
-Gc[q]                 ->  模1 = |q|
-Gc[-p2 + q]           ->  模2 = |-p2 + q|
-Gc[p1 + p4 + q]       ->  模3 = |p1 + p4 + q|
-Gc[p1 + q]            ->  模4 = |p1 + q|
-Gc[p1 + p3 + q]       ->  模1 = |q|
-Gc[-p3 + q]           ->  模4 = |p1 + q|
+q -> xq
+-p2 + q -> xMp2Pq4
+p1 + p4 + q -> xPp1Pp4Pq4
+p1 + q -> xPp1Pq4
+p1 + p3 + q -> xq
+-p3 + q -> xPp1Pq4
 ```
 
 Grouped by representative:
 
 ```
-模1  |q|            :  q,  p1+p3+q,  p1+p3-q,  -p1-p3+q,  -p2-p4+q,  p2+p4+q
-模2  |-p2+q|        :  -p2+q,  p4+q,  p2-q
-模3  |p1+p4+q|      :  p1+p4+q,  -p2-p3+q
-模4  |p1+q|         :  p1+q,  -p3+q,  p3-q
-模5  |p1+p2-q|      :  p1+p2-q,  -p1-p2+q
-模6  |p1+p4-q|      :  p1+p4-q,  -p1-p4+q,  p2+p3+q
-模7  |p3+q|         :  p3+q,  p1-q,  -p1+q
-模8  |p2+q|         :  p2+q
-模9  |-p3-p4+q|     :  -p3-p4+q
+xq            :  q,  p1 + p3 + q,  p1 + p3 - q,  -p1 - p3 + q,  -p2 - p4 + q,  p2 + p4 + q
+xMp2Pq4       :  -p2 + q,  p4 + q,  p2 - q
+xPp1Pp4Pq4    :  p1 + p4 + q,  -p2 - p3 + q
+xPp1Pq4       :  p1 + q,  -p3 + q,  p3 - q
+xPp1Pp2Mq4    :  p1 + p2 - q,  -p1 - p2 + q
+xPp1Pp4Mq4    :  p1 + p4 - q,  -p1 - p4 + q,  p2 + p3 + q
+xPp3Pq4       :  p3 + q,  p1 - q,  -p1 + q
+xPp2Pq4       :  p2 + q
+xMp3Mp4Pq4    :  -p3 - p4 + q
 ```
 
 ---
