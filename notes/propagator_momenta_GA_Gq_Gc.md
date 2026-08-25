@@ -216,7 +216,19 @@ First appearance defines the name; later equal \(\lvert k\rvert\) reuse it.
 | `xPp2Pq4` | `p2+q` | |
 | `xMp3Mp4Pq4` | `-p3-p4+q` | |
 
-Lists and replacement rules: [`propagator_momenta_GA_Gq_Gc.wl`](propagator_momenta_GA_Gq_Gc.wl).
+Nine moduli as `momentum4` assignments (paraRepl4 names): [`nine_moduli_momentum4.wl`](nine_moduli_momentum4.wl).
+
+```
+xq = momentum4[q]
+xMp2Pq4 = momentum4[-p2 + q]
+xPp1Mp2Pq4 = momentum4[p1 - p2 + q]
+xPp1Pq4 = momentum4[p1 + q]
+xPp1Pp2Mq4 = momentum4[p1 + p2 - q]
+xPp1Mp4Mq4 = momentum4[p1 + p4 - q]
+xMp1Pq4 = momentum4[-p1 + q]
+xPp2Pq4 = momentum4[p2 + q]
+xPp1Pp2Pq4 = momentum4[p1 + p2 + q]
+```
 
 ---
 
