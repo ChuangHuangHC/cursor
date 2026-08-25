@@ -1,0 +1,455 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+Notebook[{
+
+Cell[CellGroupData[{
+
+Cell["\:6309\:5206\:6bcd\:5206\:7ec4\:5408\:5e76\:ff08\:957f\:516c\:5f0f\:53ef\:7528\:7248\:ff09", "Title",
+ CellChangeTimes->{{3.99665500000000, 3.99665500000001}}],
+
+Cell["\<\
+\:4f7f\:7528\:65b9\:6cd5\:ff1a
+1) \:5148\:53ea\:8fd0\:884c\:4e0b\:9762\:300c\:5b9a\:4e49\:300d\:90a3\:4e00\:683c\:ff08\:4e0d\:8981\:548c\:957f\:516c\:5f0f\:653e\:540c\:4e00\:683c\:ff09
+2) \:518d\:5728\:4e0b\:4e00\:683c\:7ed9 expr \:8d4b\:503c
+3) \:6700\:540e\:8fd0\:884c GroupTermsByDenominator[expr]
+\:82e5\:770b\:5230\:539f\:6837\:8fd4\:56de GroupTermsByDenominator[expr]\:ff0c\:8bf4\:660e\:5185\:6838\:5b9a\:4e49\:4e22\:4e86\:ff0c\:91cd\:65b0\:8fd0\:884c\:5b9a\:4e49\:683c\:5373\:53ef\:3002\
+\>", "Text",
+ CellChangeTimes->{{3.99665500000002, 3.99665500000003}}],
+
+Cell[CellGroupData[{
+
+Cell["1. \:5b9a\:4e49\:ff08\:53ea\:8fd0\:884c\:8fd9\:4e00\:683c\:ff09", "Section",
+ CellChangeTimes->{{3.99665500000004, 3.99665500000005}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\:6309\:5206\:6bcd\:5206\:7ec4", "+", "\:5408\:5e76", "+", 
+    RowBox[{"\:8d4b\:503c", " ", "resultN", 
+     RowBox[{"\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}]}]}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ClearAll", "[", 
+     RowBox[{
+     "GroupTermsByDenominator", ",", "clearResultN"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"SetAttributes", "[", 
+     RowBox[{"GroupTermsByDenominator", ",", "HoldAll"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Options", "[", "GroupTermsByDenominator", "]"}], "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Verbose", "\[Rule]", "False"}], ",", 
+       RowBox[{"TimeLimit", "\[Rule]", "Infinity"}], ",", 
+       RowBox[{"\"\<NormalizeDenominator\>\"", "\[Rule]", "False"}]}], 
+      "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"clearResultN", "[", "]"}], ":=", 
+    RowBox[{"Quiet", "[", 
+     RowBox[{"ClearAll", "[", "resultN", "]"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{
+     RowBox[{"\:652f\:6301", " ", 
+      RowBox[{"GroupTermsByDenominator", "[", "expr", "]"}]}], "\:ff0c", 
+     RowBox[{"expr", " ", "\:4e3a\:5df2\:8d4b\:503c\:7b26\:53f7"}]}], " ", 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GroupTermsByDenominator", "[", 
+      RowBox[{
+       RowBox[{"sym_Symbol", "/;", 
+        RowBox[{
+         RowBox[{"OwnValues", "[", "sym", "]"}], "=!=", 
+         RowBox[{"{", "}"}]}]}], ",", 
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     RowBox[{"GroupTermsByDenominator", "[", 
+      RowBox[{
+       RowBox[{"Evaluate", "[", "sym", "]"}], ",", "opts"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GroupTermsByDenominator", "[", 
+      RowBox[{"expr_", ",", 
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "verbose", ",", "timeLimit", ",", "normalize", ",", "terms", ",", 
+         "assoc", ",", "order", ",", "d", ",", "t", ",", "grouped", ",", "n", 
+         ",", "i", ",", "body", ",", "result", ",", "j"}], "}"}], ",", 
+       RowBox[{
+        RowBox[{"verbose", "=", 
+         RowBox[{"TrueQ", "[", 
+          RowBox[{"OptionValue", "[", "Verbose", "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"timeLimit", "=", 
+         RowBox[{"OptionValue", "[", "TimeLimit", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"normalize", "=", 
+         RowBox[{"TrueQ", "[", 
+          RowBox[{"OptionValue", "[", "\"\<NormalizeDenominator\>\"", "]"}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"body", ":=", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"clearResultN", "[", "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"terms", "=", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Head", "[", 
+                RowBox[{"Unevaluated", "[", "expr", "]"}], "]"}], "===", 
+               "Plus"}], ",", 
+              RowBox[{"List", "@@", 
+               RowBox[{"Unevaluated", "[", "expr", "]"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"Unevaluated", "[", "expr", "]"}], "}"}]}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"terms", "=", 
+            RowBox[{"ReleaseHold", "/@", 
+             RowBox[{"(", 
+              RowBox[{"Hold", "/@", "terms"}], ")"}]}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"assoc", "=", 
+            RowBox[{"<|", "|>"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"order", "=", 
+            RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"t", "=", 
+               RowBox[{"terms", "[", 
+                RowBox[{"[", "j", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"d", "=", 
+               RowBox[{"Denominator", "[", 
+                RowBox[{"Together", "[", "t", "]"}], "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{"normalize", ",", 
+                RowBox[{"d", "=", 
+                 RowBox[{"Factor", "[", "d", "]"}]}]}], "]"}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"!", 
+                 RowBox[{"KeyExistsQ", "[", 
+                  RowBox[{"assoc", ",", "d"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"AppendTo", "[", 
+                  RowBox[{"order", ",", "d"}], "]"}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"assoc", "[", "d", "]"}], "=", "t"}], ";"}], ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"assoc", "[", "d", "]"}], "=", 
+                  RowBox[{
+                   RowBox[{"assoc", "[", "d", "]"}], "+", "t"}]}], ";"}]}], 
+               "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"j", ",", 
+               RowBox[{"Length", "[", "terms", "]"}]}], "}"}]}], "]"}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"grouped", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"d", ",", 
+                RowBox[{"Together", "[", 
+                 RowBox[{"assoc", "[", "d", "]"}], "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"d", ",", "order"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"n", "=", 
+            RowBox[{"Length", "[", "grouped", "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Do", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"resultN", "[", "i", "]"}], "=", 
+              RowBox[{"grouped", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{"verbose", ",", 
+             RowBox[{
+              RowBox[{
+              "Print", "[", "\"\<==========================================\>\"",
+                "]"}], ";", "\[IndentingNewLine]", 
+              RowBox[{
+              "Print", "[", "\"\<\:3010\:5206\:7ec4\:7ed3\:679c\:3011\>\"", 
+               "]"}], ";", "\[IndentingNewLine]", 
+              RowBox[{"Print", "[", 
+               RowBox[{
+               "\"\<\:8868\:8fbe\:5f0f\:5171\:6709 \>\"", ",", "n", ",", 
+                "\"\< \:4e2a\:4e0d\:540c\:5206\:6bcd\:7684\:5b50\:9879\>\""}], 
+               "]"}], ";", "\[IndentingNewLine]", 
+              RowBox[{
+              "Print", "[", "\"\<------------------------------------------\>\"",
+                "]"}], ";", "\[IndentingNewLine]", 
+              RowBox[{"Do", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Print", "[", 
+                  RowBox[{
+                  "\"\<\:5b50\:9879 \>\"", ",", "i", ",", "\"\<:\>\""}], "]"}],
+                  ";", "\[IndentingNewLine]", 
+                 RowBox[{"Print", "[", 
+                  RowBox[{"\"\<  \:5206\:6bcd = \>\"", ",", 
+                   RowBox[{"Short", "[", 
+                    RowBox[{
+                    RowBox[{"grouped", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", "3"}], 
+                    "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"Print", "[", 
+                  RowBox[{"\"\<  \:8868\:8fbe\:5f0f = \>\"", ",", 
+                   RowBox[{"Short", "[", 
+                    RowBox[{
+                    RowBox[{"grouped", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "2"}], "]"}], "]"}], ",", "3"}], 
+                    "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"Print", "[", 
+                  RowBox[{"\"\<  LeafCount = \>\"", ",", 
+                   RowBox[{"LeafCount", "[", 
+                    RowBox[{"grouped", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "2"}], "]"}], "]"}], "]"}]}], "]"}], ";",
+                  "\[IndentingNewLine]", 
+                 RowBox[{"Print", "[", 
+                  RowBox[{"\"\<  \:5df2\:8d4b\:503c\:7ed9: resultN[\>\"", ",", 
+                   "i", ",", "\"\<]\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+                 RowBox[{
+                 "Print", "[", 
+                  "\"\<------------------------------------------\>\"", 
+                  "]"}]}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{
+              "Print", "[", "\"\<==========================================\>\"",
+                "]"}], ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
+           "grouped"}], ")"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"timeLimit", "===", "Infinity"}], ",", "body", ",", 
+          RowBox[{
+           RowBox[{"result", "=", 
+            RowBox[{"TimeConstrained", "[", 
+             RowBox[{"body", ",", "timeLimit", ",", "$Failed"}], "]"}]}], ";",
+            "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"result", "===", "$Failed"}], ",", 
+             RowBox[{
+              RowBox[{"Message", "[", 
+               RowBox[{
+                RowBox[{"GroupTermsByDenominator", "::", "timeout"}], ",", 
+                "timeLimit"}], "]"}], ";", "$Failed"}], ",", "result"}], 
+            "]"}]}]}], "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GroupTermsByDenominator", "::", "timeout"}], "=", 
+     "\"\<Grouping aborted after `1` seconds. Raise TimeLimit or simplify \
+input.\>\""}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+   "Print", "[", 
+    "\"\<GroupTermsByDenominator \:5df2\:52a0\:8f7d\:3002Verbose \:9ed8\:8ba4 \
+False\:ff1b\:53ef\:7528 TimeLimit -> 60\:3002\>\"", "]"}], ";"}]}]], "Input",
+ CellLabel->"In[1]:="],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"\:786e\:8ba4\:5b9a\:4e49\:5df2\:52a0\:8f7d", ":", " ", 
+   RowBox[{
+    RowBox[{"DownValues", "[", "GroupTermsByDenominator", "]"}], " ", 
+    "\:4e0d\:5e94\:4e3a", " ", 
+    RowBox[{"{", "}"}]}]}], " ", "*)"}]], "Input",
+ CellLabel->"In[2]:="],
+
+Cell[BoxData[
+ RowBox[{"DownValues", "[", "GroupTermsByDenominator", "]"}]], "Input",
+ CellLabel->"In[3]:="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["2. \:5c0f\:4f8b\:5b50\:ff08\:5148\:8dd1\:901a\:ff09", "Section",
+ CellChangeTimes->{{3.99665500000006, 3.99665500000007}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"expr", "=", 
+   RowBox[{
+    RowBox[{"a", "/", "x"}], "+", 
+    RowBox[{"b", "/", 
+     RowBox[{"(", 
+      RowBox[{"x", "+", "1"}], ")"}]}], "+", 
+    RowBox[{"c", "/", 
+     RowBox[{"(", 
+      RowBox[{"x", "+", "1"}], ")"}]}], "+", 
+    RowBox[{"d", "/", 
+     RowBox[{"(", 
+      RowBox[{"x", "-", "1"}], ")"}]}]}]}], ";"}]], "Input",
+ CellLabel->"In[4]:="],
+
+Cell[BoxData[
+ RowBox[{"grouped", "=", 
+  RowBox[{"GroupTermsByDenominator", "[", "expr", "]"}]}]], "Input",
+ CellLabel->"In[5]:="],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Length", "[", "grouped", "]"}], ",", 
+   RowBox[{"resultN", "[", "1", "]"}], ",", 
+   RowBox[{"resultN", "[", "2", "]"}], ",", 
+   RowBox[{"resultN", "[", "3", "]"}]}], "}"}]], "Input",
+ CellLabel->"In[6]:="],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"\:9700\:8981\:6253\:5370\:65f6", ":", " ", 
+    RowBox[{"GroupTermsByDenominator", "[", 
+     RowBox[{"expr", ",", 
+      RowBox[{"Verbose", "\[Rule]", "True"}]}], "]"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\:9632\:5361\:6b7b", ":", " ", 
+    RowBox[{"GroupTermsByDenominator", "[", 
+     RowBox[{"expr", ",", 
+      RowBox[{"TimeLimit", "\[Rule]", "60"}]}], "]"}]}]}], " ", 
+  "*)"}]], "Input",
+ CellLabel->"In[7]:="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["3. \:957f\:516c\:5f0f\:7528\:6cd5\:ff08\:628a\:4f60\:7684\:5f0f\:5b50\:8d34\:5230\:8fd9\:91cc\:ff09", "Section",
+ CellChangeTimes->{{3.99665500000008, 3.99665500000009}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "\:91cd\:8981", ":", " ", 
+    "\:8fd9\:4e00\:683c\:53ea\:8d4b\:503c\:ff0c\:4e0d\:8981\:548c\:5b9a\:4e49\
+\:683c\:5408\:5e76"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"expr", "=", 
+     RowBox[{
+     "(*", " ", "\:5728\:8fd9\:91cc\:7c98\:8d34\:4f60\:7684\:957f\:516c\:5f0f",
+       " ", "*)"}], 
+     RowBox[{
+      RowBox[{"a", "/", "x"}], "+", 
+      RowBox[{"b", "/", 
+       RowBox[{"(", 
+        RowBox[{"x", "+", "1"}], ")"}]}], "+", 
+      RowBox[{"c", "/", 
+       RowBox[{"(", 
+        RowBox[{"x", "-", "1"}], ")"}]}]}]}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Print", "[", 
+     RowBox[{"\"\<LeafCount(expr) = \>\"", ",", 
+      RowBox[{"LeafCount", "[", "expr", "]"}]}], "]"}], ";"}]}]}]], "Input",
+ CellLabel->"In[8]:="],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\:9ed8\:8ba4\:4e0d", " ", "Print", " ", 
+    "\:5168\:6587\:ff0c\:907f\:514d\:957f\:516c\:5f0f\:5361\:6b7b\:524d\:7aef"}\
+], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"grouped", "=", 
+    RowBox[{"GroupTermsByDenominator", "[", 
+     RowBox[{"expr", ",", 
+      RowBox[{"TimeLimit", "\[Rule]", "120"}]}], "]"}]}], ";"}]}]], "Input",
+ CellLabel->"In[9]:="],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"grouped", "===", "$Failed"}], ",", 
+    RowBox[{
+    "Print", "[", "\"\<\:8d85\:65f6\:5931\:8d25\:ff0c\:8bf7\:589e\:5927 \
+TimeLimit \:6216\:5148\:5316\:7b80\:516c\:5f0f\>\"", "]"}], ",", 
+    RowBox[{
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<\:5b50\:9879\:6570\:91cf = \>\"", ",", 
+       RowBox[{"Length", "[", "grouped", "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{"Print", "[", 
+        RowBox[{"\"\<resultN[\>\"", ",", "i", ",", "\"\<] LeafCount = \>\"", 
+         ",", 
+         RowBox[{"LeafCount", "[", 
+          RowBox[{"resultN", "[", "i", "]"}], "]"}], ",", 
+         "\"\<  Short = \>\"", ",", 
+         RowBox[{"Short", "[", 
+          RowBox[{
+           RowBox[{"resultN", "[", "i", "]"}], ",", "2"}], "]"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "[", "grouped", "]"}]}], "}"}]}], "]"}], ";"}]}], 
+   "]"}], ";"}]], "Input",
+ CellLabel->"In[10]:="]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["4. \:51fa\:73b0 GroupTermsByDenominator[expr] \:539f\:6837\:8fd4\:56de\
+\:65f6", "Section",
+ CellChangeTimes->{{3.99665500000010, 3.99665500000011}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "\:8fd0\:884c\:672c\:683c\:8bca\:65ad", ";", 
+    "\:82e5\:5b9a\:4e49\:4e22\:5931\:5c31\:56de\:5230\:7b2c1\:8282\:91cd\:8dd1\
+\:5b9a\:4e49\:683c"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<\:5b9a\:4e49\:662f\:5426\:5b58\:5728: \>\"", ",", 
+     RowBox[{
+      RowBox[{"DownValues", "[", "GroupTermsByDenominator", "]"}], "=!=", 
+      RowBox[{"{", "}"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+   RowBox[{"Print", "[", 
+    RowBox[{"\"\<expr \:662f\:5426\:5df2\:8d4b\:503c: \>\"", ",", 
+     RowBox[{
+      RowBox[{"OwnValues", "[", "expr", "]"}], "=!=", 
+      RowBox[{"{", "}"}]}]}], "]"}], ";"}]}]], "Input",
+ CellLabel->"In[11]:="]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1200, 800},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.0 for Mac OS X x86 (64-bit)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+]
+(* End of Notebook File *)

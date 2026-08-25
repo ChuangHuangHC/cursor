@@ -1,15 +1,15 @@
 # cursor
 
-Helpers for grouping Mathematica sums by denominator.
+按分母分组合并的 Mathematica 工具。
 
-See [`notes/README_SplitByDenominator.md`](notes/README_SplitByDenominator.md).
+## 直接用这个 notebook
 
-Quick start (Wolfram):
+打开并按顺序运行：
 
-```wolfram
-<< "notes/GroupTermsByDenominator.wl"
-expr = yourLongSum;
-GroupTermsByDenominator[expr]   (* fills resultN[i]; Verbose -> False *)
-```
+[`GroupTermsByDenominator.nb`](GroupTermsByDenominator.nb)
 
-If a long formula makes the call return the literal `GroupTermsByDenominator[expr]`, the kernel lost the definition (usually after Abort / crash from huge `Print`). Reload the `.wl` file in its own cell, then reassign `expr`.
+1. 先跑第 1 节「定义」那一格  
+2. 再给 `expr` 赋值（长公式单独一格）  
+3. 运行 `GroupTermsByDenominator[expr]`，结果在 `resultN[i]`
+
+更细的说明见 [`notes/README_SplitByDenominator.md`](notes/README_SplitByDenominator.md)。
