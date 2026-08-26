@@ -1,33 +1,19 @@
 # cursor
 
-Mathematica helpers for simplifying large rational sums by grouping terms that share a denominator.
-
-## `SimplifyByDenominator.wl`
-
-Load in a notebook:
+## `UltraSimplify.wl`
 
 ```wolfram
-Get["/path/to/SimplifyByDenominator.wl"]
+Get["UltraSimplify.wl"]
+
+UltraSimplify[expr]
+UltraSimplify[expr, TimeLimit -> 18000]
 ```
 
-### One-shot simplify (recommended)
+Pipeline (silent, like built-in `Simplify`):
 
-```wolfram
-SimplifyByDenominator[expr]
-SimplifyByDenominator[expr, TimeLimit -> 18000, Verbose -> True]
-SimplifyByDenominator[expr, "FinalSimplify" -> False]
-SimplifyByDenominator[expr, "SimplifyOptions" -> {Assumptions -> p > 0}]
-```
+1. Group terms that share a denominator (`GroupTermsByDenominator`)
+2. `Simplify` each group
+3. `Sum` / `Total`
+4. `Simplify` again
 
-Pipeline inside:
-
-1. `GroupTermsByDenominator` — merge terms with the same denominator into `resultN[i]`
-2. `Simplify` each `resultN[i]` in place
-3. `Sum` the simplified pieces (optional final `Simplify`)
-
-### Lower-level grouping only
-
-```wolfram
-grouped = GroupTermsByDenominator[expr, TimeLimit -> 18000];
-resultN[1] (* … *)
-```
+Works for any number of groups. No printing. No coordinate substitutions.
