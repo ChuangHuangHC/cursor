@@ -2,7 +2,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
         (Power[lambda4aQF6,2]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
            (-3830 - 800*Cos[2*phi] + 6*Cos[4*phi] - 792*Cos[2*theta] + 14*Cos[4*theta] - 4*Cos[2*(-2*phi + theta)] + 400*Cos[2*(-phi + theta)] + 
              Cos[4*(-phi + theta)] + 400*Cos[2*(phi + theta)] + Cos[4*(phi + theta)] - 4*Cos[2*(2*phi + theta)]))/
-         (Power[mA2 + Power[q,2]*(1 + RAxq),3]*Power[ZAxq,3]) - (Power[lambda3aQF1,2]*Sqrt(Power[lambda4aQF6,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
+         (Power[mA2 + Power[q,2]*(1 + RAxq),3]*Power[ZAxq,3]) - (Power[lambda3aQF1,2]*Sqrt[Power[lambda4aQF6,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
           (640*Power[p,4] + 1874*Power[p,2]*Power[q,2] + 712*Power[q,4] + 64*Power[p,4]*Cos[2*phi] + 1632*Power[p,2]*Power[q,2]*Cos[2*phi] + 
             128*Power[q,4]*Cos[2*phi] - 2*Power[p,2]*Power[q,2]*Cos[4*phi] - 8*Power[q,4]*Cos[4*phi] + 8*p*q*(32*Power[p,2] + 41*Power[q,2])*Cos[theta] + 
             8*(16*Power[p,4] - 60*Power[p,2]*Power[q,2] + 7*Power[q,4])*Cos[2*theta] + 128*Power[p,3]*q*Cos[3*theta] + 56*p*Power[q,3]*Cos[3*theta] + 
@@ -15,7 +15,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
             4*p*Power[q,3]*Cos[4*phi + 3*theta])*Power[Sin[theta],2])/
         (352*Power[mA2 + Power[q,2]*(1 + RAxq),3]*ZAxPp1Pq4*Power[ZAxq,3]*(Power[p,2] + Power[q,2] + 2*p*q*Cos[theta])*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp1Pq4) + 2*p*q*(1 + RAxPp1Pq4)*Cos[theta])) - 
-       (Power[lambda3aQF8,2]*Sqrt(Power[lambda4aQF14,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
+       (Power[lambda3aQF8,2]*Sqrt[Power[lambda4aQF14,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
           (2176*Power[p,6] + 10848*Power[p,4]*Power[q,2] + 7634*Power[p,2]*Power[q,4] + 712*Power[q,6] - 608*Power[p,4]*Power[q,2]*Cos[2*phi] - 
             1440*Power[p,2]*Power[q,4]*Cos[2*phi] + 128*Power[q,6]*Cos[2*phi] - 2*Power[p,2]*Power[q,4]*Cos[4*phi] - 8*Power[q,6]*Cos[4*phi] - 
             8*p*q*(1088*Power[p,4] + 2028*Power[p,2]*Power[q,2] + 521*Power[q,4])*Cos[theta] + 
@@ -38,7 +38,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
             Power[q,2]*Cos[2*(2*phi + theta)])*Power[Sin[theta],2])/
         (176*(1 + RcxPp1Pp4Pq4)*Power[1 + RcxPp1Pq4,2]*Power[1 + Rcxq,2]*ZcxPp1Pp4Pq4*Power[ZcxPp1Pq4,2]*Power[Zcxq,2]*
           Power[Power[p,2] + Power[q,2] + 2*p*q*Cos[theta],2]*(2*Power[p,2] + Power[q,2] + 2*p*q*Cos[theta] - 2*p*q*Cos[phi]*Sin[theta])) - 
-       (2*Sqrt(Power[lambda3aQF11,2])*Sqrt(Power[lambda3aQF13,2])*Sqrt(Power[lambda4aQF7,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
+       (2*Sqrt[Power[lambda3aQF11,2]]*Sqrt[Power[lambda3aQF13,2]]*Sqrt[Power[lambda4aQF7,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
           (-(p*Power[q,4]*Power[Cos[theta],5]*(q + p*Cos[phi]*Sin[theta])) + 
             Power[q,3]*Power[Cos[theta],4]*(-5*Power[p,2]*q + Power[q,3] - p*(5*Power[p,2] - 3*Power[q,2])*Cos[phi]*Sin[theta] + 
                2*Power[p,2]*q*Power[Cos[phi],2]*Power[Sin[theta],2]) - 
@@ -134,8 +134,8 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
           Power[mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp3Pq4) - 2*p*q*(1 + RAxPp3Pq4)*Cos[theta],2]*
           (2*Power[p,2] + Power[q,2] - 2*p*q*Cos[theta] + 2*p*q*Cos[phi]*Sin[theta])*
           (mA2 + 2*Power[p,2] + Power[q,2] + 2*Power[p,2]*RAxPp1Pp4Mq4 + Power[q,2]*RAxPp1Pp4Mq4 - 2*p*q*(1 + RAxPp1Pp4Mq4)*Cos[theta] + 
-            2*p*q*(1 + RAxPp1Pp4Mq4)*Cos[phi]*Sin[theta])) + (32*Sqrt(Power[lambda3aQF11,2])*Sqrt(Power[lambda3aQF13,2])*Sqrt(Power[lambda3aQF17,2])*
-          Sqrt(Power[lambda3aQF8,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
+            2*p*q*(1 + RAxPp1Pp4Mq4)*Cos[phi]*Sin[theta])) + (32*Sqrt[Power[lambda3aQF11,2]]*Sqrt[Power[lambda3aQF13,2]]*Sqrt[Power[lambda3aQF17,2]]*
+          Sqrt[Power[lambda3aQF8,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
           (-2*Power[p,3]*Power[q,6]*Power[Cos[theta],7]*(q + p*Cos[phi]*Sin[theta]) + 
             Power[p,2]*Power[q,5]*Power[Cos[theta],6]*(17*Power[p,2]*q + 13*Power[q,3] + p*(9*Power[p,2] + 26*Power[q,2])*Cos[phi]*Sin[theta] + 
                5*Power[p,2]*q*Power[Cos[phi],2]*Power[Sin[theta],2]) - 
@@ -211,7 +211,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
         (176*(1 + RcxMp2Pq4)*(1 + RcxPp1Pp4Pq4)*(1 + RcxPp1Pq4)*Power[1 + Rcxq,2]*ZcxMp2Pq4*ZcxPp1Pp4Pq4*ZcxPp1Pq4*Power[Zcxq,2]*
           (Power[p,2] + Power[q,2] + 2*p*q*Cos[theta])*(Power[p,2] + Power[q,2] - 2*p*q*Cos[phi]*Sin[theta])*
           (2*Power[p,2] + Power[q,2] + 2*p*q*Cos[theta] - 2*p*q*Cos[phi]*Sin[theta])) - 
-       (Sqrt(Power[lambda3aQF11,2])*Sqrt(Power[lambda3aQF8,2])*Sqrt(Power[lambda4aQF7,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*
+       (Sqrt[Power[lambda3aQF11,2]]*Sqrt[Power[lambda3aQF8,2]]*Sqrt[Power[lambda4aQF7,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*
           (-25088*Power[p,5]*q*Cos[phi] - 31232*Power[p,3]*Power[q,3]*Cos[phi] - 5208*p*Power[q,5]*Cos[phi] - 2432*Power[p,3]*Power[q,3]*Cos[3*phi] - 
             756*p*Power[q,5]*Cos[3*phi] + 12*p*Power[q,5]*Cos[5*phi] - 2*Power[p,2]*Power[q,4]*Cos[-5*phi + theta] + 
             304*Power[p,4]*Power[q,2]*Cos[-3*phi + theta] + 878*Power[p,2]*Power[q,4]*Cos[-3*phi + theta] + 12544*Power[p,6]*Cos[-phi + theta] + 
@@ -249,7 +249,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
         (5632*Power[mA2 + Power[q,2]*(1 + RAxq),2]*ZAxPp2Pq4*ZAxPp3Pq4*Power[ZAxq,2]*(Power[p,2] + Power[q,2] - 2*p*q*Cos[theta])*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp3Pq4) - 2*p*q*(1 + RAxPp3Pq4)*Cos[theta])*(Power[p,2] + Power[q,2] + 2*p*q*Cos[phi]*Sin[theta])*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp2Pq4) + 2*p*q*(1 + RAxPp2Pq4)*Cos[phi]*Sin[theta])) - 
-       (Sqrt(Power[lambda3aQF2,2])*Sqrt(Power[lambda3aQF8,2])*Sqrt(Power[lambda4aQF5,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*
+       (Sqrt[Power[lambda3aQF2,2]]*Sqrt[Power[lambda3aQF8,2]]*Sqrt[Power[lambda4aQF5,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*
           (25088*Power[p,5]*q*Cos[phi] + 31232*Power[p,3]*Power[q,3]*Cos[phi] + 5208*p*Power[q,5]*Cos[phi] + 2432*Power[p,3]*Power[q,3]*Cos[3*phi] + 
             756*p*Power[q,5]*Cos[3*phi] - 12*p*Power[q,5]*Cos[5*phi] + 2*Power[p,2]*Power[q,4]*Cos[-5*phi + theta] - 
             304*Power[p,4]*Power[q,2]*Cos[-3*phi + theta] - 878*Power[p,2]*Power[q,4]*Cos[-3*phi + theta] - 12544*Power[p,6]*Cos[-phi + theta] - 
@@ -287,7 +287,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
         (2816*Power[mA2 + Power[q,2]*(1 + RAxq),2]*ZAxMp2Pq4*ZAxPp3Pq4*Power[ZAxq,2]*(Power[p,2] + Power[q,2] - 2*p*q*Cos[theta])*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp3Pq4) - 2*p*q*(1 + RAxPp3Pq4)*Cos[theta])*(Power[p,2] + Power[q,2] - 2*p*q*Cos[phi]*Sin[theta])*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxMp2Pq4) - 2*p*q*(1 + RAxMp2Pq4)*Cos[phi]*Sin[theta])) + 
-       (Sqrt(Power[lambda3aQF1,2])*Sqrt(Power[lambda3aQF2,2])*Sqrt(Power[lambda4aQF10,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*
+       (Sqrt[Power[lambda3aQF1,2]]*Sqrt[Power[lambda3aQF2,2]]*Sqrt[Power[lambda4aQF10,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*
           (-25088*Power[p,5]*q*Cos[phi] - 31232*Power[p,3]*Power[q,3]*Cos[phi] - 5208*p*Power[q,5]*Cos[phi] - 2432*Power[p,3]*Power[q,3]*Cos[3*phi] - 
             756*p*Power[q,5]*Cos[3*phi] + 12*p*Power[q,5]*Cos[5*phi] + 2*Power[p,2]*Power[q,4]*Cos[-5*phi + theta] - 
             304*Power[p,4]*Power[q,2]*Cos[-3*phi + theta] - 878*Power[p,2]*Power[q,4]*Cos[-3*phi + theta] - 12544*Power[p,6]*Cos[-phi + theta] - 
@@ -325,7 +325,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
         (5632*Power[mA2 + Power[q,2]*(1 + RAxq),2]*ZAxMp2Pq4*ZAxPp1Pq4*Power[ZAxq,2]*(Power[p,2] + Power[q,2] + 2*p*q*Cos[theta])*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp1Pq4) + 2*p*q*(1 + RAxPp1Pq4)*Cos[theta])*(Power[p,2] + Power[q,2] - 2*p*q*Cos[phi]*Sin[theta])*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxMp2Pq4) - 2*p*q*(1 + RAxMp2Pq4)*Cos[phi]*Sin[theta])) - 
-       (Power[lambda3aQF11,2]*Sqrt(Power[lambda4aQF6,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
+       (Power[lambda3aQF11,2]*Sqrt[Power[lambda4aQF6,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
           (6624*Power[p,4] + 29896*Power[p,2]*Power[q,2] + 8544*Power[q,4] - 1664*Power[p,4]*Cos[2*phi] - 5804*Power[p,2]*Power[q,2]*Cos[2*phi] - 
             2048*Power[q,4]*Cos[2*phi] - 96*Power[p,4]*Cos[4*phi] + 2168*Power[p,2]*Power[q,2]*Cos[4*phi] - 96*Power[q,4]*Cos[4*phi] - 
             20*Power[p,2]*Power[q,2]*Cos[6*phi] + 4*(480*Power[p,4] + 5193*Power[p,2]*Power[q,2] + 992*Power[q,4])*Cos[2*theta] - 
@@ -355,7 +355,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
             104*Power[p,3]*q*Sin[3*phi + 5*theta] - 8*p*Power[q,3]*Sin[3*phi + 5*theta]))/
         (5632*Power[mA2 + Power[q,2]*(1 + RAxq),3]*ZAxPp2Pq4*Power[ZAxq,3]*(Power[p,2] + Power[q,2] + 2*p*q*Cos[phi]*Sin[theta])*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp2Pq4) + 2*p*q*(1 + RAxPp2Pq4)*Cos[phi]*Sin[theta])) - 
-       (Power[lambda3aQF2,2]*Sqrt(Power[lambda4aQF12,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
+       (Power[lambda3aQF2,2]*Sqrt[Power[lambda4aQF12,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*
           (26112*Power[p,6] + 87136*Power[p,4]*Power[q,2] + 61256*Power[p,2]*Power[q,4] + 8544*Power[q,6] - 8704*Power[p,6]*Cos[2*phi] - 
             15872*Power[p,4]*Power[q,2]*Cos[2*phi] - 13996*Power[p,2]*Power[q,4]*Cos[2*phi] - 2048*Power[q,6]*Cos[2*phi] - 
             7776*Power[p,4]*Power[q,2]*Cos[4*phi] - 6664*Power[p,2]*Power[q,4]*Cos[4*phi] - 96*Power[q,6]*Cos[4*phi] - 20*Power[p,2]*Power[q,4]*Cos[6*phi] + 
@@ -390,7 +390,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
             232*Power[p,3]*Power[q,3]*Sin[3*phi + 5*theta] + 8*p*Power[q,5]*Sin[3*phi + 5*theta]))/
         (11264*Power[mA2 + Power[q,2]*(1 + RAxq),2]*Power[ZAxMp2Pq4,2]*Power[ZAxq,2]*Power[Power[p,2] + Power[q,2] - 2*p*q*Cos[phi]*Sin[theta],2]*
           Power[mA2 + (Power[p,2] + Power[q,2])*(1 + RAxMp2Pq4) - 2*p*q*(1 + RAxMp2Pq4)*Cos[phi]*Sin[theta],2]) - 
-       (Sqrt(Power[lambda3aQF8,2])*Sqrt(Power[lambda3aQF9,2])*Sqrt(Power[lambda4aQF5,2])*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*
+       (Sqrt[Power[lambda3aQF8,2]]*Sqrt[Power[lambda3aQF9,2]]*Sqrt[Power[lambda4aQF5,2]]*Power[q,2]*(dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*
           (-17920*Power[p,5]*q*Cos[phi] - 6112*Power[p,3]*Power[q,3]*Cos[phi] + 5208*p*Power[q,5]*Cos[phi] - 544*Power[p,3]*Power[q,3]*Cos[3*phi] + 
             756*p*Power[q,5]*Cos[3*phi] - 12*p*Power[q,5]*Cos[5*phi] + 2*Power[p,2]*Power[q,4]*Cos[-5*phi + theta] + 
             192*Power[p,4]*Power[q,2]*Cos[-3*phi + theta] + 114*Power[p,2]*Power[q,4]*Cos[-3*phi + theta] - 6656*Power[p,6]*Cos[-phi + theta] + 
@@ -429,7 +429,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp3Pq4) - 2*p*q*(1 + RAxPp3Pq4)*Cos[theta])*
           (2*Power[p,2] + Power[q,2] - 2*p*q*Cos[theta] - 2*p*q*Cos[phi]*Sin[theta])*
           (mA2 + 2*Power[p,2] + Power[q,2] + 2*Power[p,2]*RAxPp1Pp2Mq4 + Power[q,2]*RAxPp1Pp2Mq4 - 2*p*q*(1 + RAxPp1Pp2Mq4)*Cos[theta] - 
-            2*p*q*(1 + RAxPp1Pp2Mq4)*Cos[phi]*Sin[theta])) - (Sqrt(Power[lambda3aQF1,2])*Sqrt(Power[lambda3aQF4,2])*Sqrt(Power[lambda4aQF10,2])*Power[q,2]*
+            2*p*q*(1 + RAxPp1Pp2Mq4)*Cos[phi]*Sin[theta])) - (Sqrt[Power[lambda3aQF1,2]]*Sqrt[Power[lambda3aQF4,2]]*Sqrt[Power[lambda4aQF10,2]]*Power[q,2]*
           (dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*(-17920*Power[p,5]*q*Cos[phi] - 6112*Power[p,3]*Power[q,3]*Cos[phi] + 5208*p*Power[q,5]*Cos[phi] - 
             544*Power[p,3]*Power[q,3]*Cos[3*phi] + 756*p*Power[q,5]*Cos[3*phi] - 12*p*Power[q,5]*Cos[5*phi] - 2*Power[p,2]*Power[q,4]*Cos[-5*phi + theta] - 
             192*Power[p,4]*Power[q,2]*Cos[-3*phi + theta] - 114*Power[p,2]*Power[q,4]*Cos[-3*phi + theta] + 6656*Power[p,6]*Cos[-phi + theta] - 
@@ -468,7 +468,7 @@ expr = (Power[q,3]*Sin[phi]*Power[Sin[theta],2]*(-(1/1408)*
           (mA2 + (Power[p,2] + Power[q,2])*(1 + RAxPp1Pq4) + 2*p*q*(1 + RAxPp1Pq4)*Cos[theta])*
           (2*Power[p,2] + Power[q,2] + 2*p*q*Cos[theta] - 2*p*q*Cos[phi]*Sin[theta])*
           (mA2 + 2*Power[p,2] + Power[q,2] + 2*Power[p,2]*RAxPp1Pp4Pq4 + Power[q,2]*RAxPp1Pp4Pq4 + 2*p*q*(1 + RAxPp1Pp4Pq4)*Cos[theta] - 
-            2*p*q*(1 + RAxPp1Pp4Pq4)*Cos[phi]*Sin[theta])) - (Sqrt(Power[lambda3aQF1,2])*Sqrt(Power[lambda3aQF16,2])*Sqrt(Power[lambda4aQF15,2])*Power[q,2]*
+            2*p*q*(1 + RAxPp1Pp4Pq4)*Cos[phi]*Sin[theta])) - (Sqrt[Power[lambda3aQF1,2]]*Sqrt[Power[lambda3aQF16,2]]*Sqrt[Power[lambda4aQF15,2]]*Power[q,2]*
           (dtZAxq*RAxq + dRAxq*ZAxq)*Sin[theta]*(17920*Power[p,5]*q*Cos[phi] + 6112*Power[p,3]*Power[q,3]*Cos[phi] - 5208*p*Power[q,5]*Cos[phi] + 
             544*Power[p,3]*Power[q,3]*Cos[3*phi] - 756*p*Power[q,5]*Cos[3*phi] + 12*p*Power[q,5]*Cos[5*phi] + 2*Power[p,2]*Power[q,4]*Cos[-5*phi + theta] + 
             192*Power[p,4]*Power[q,2]*Cos[-3*phi + theta] + 114*Power[p,2]*Power[q,4]*Cos[-3*phi + theta] - 6656*Power[p,6]*Cos[-phi + theta] + 
