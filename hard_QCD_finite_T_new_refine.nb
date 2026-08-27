@@ -13538,9 +13538,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -13616,9 +13619,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -13694,9 +13700,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -13772,9 +13781,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -13850,9 +13862,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -13928,9 +13943,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -14686,9 +14704,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -14762,9 +14783,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -14838,9 +14862,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -14914,9 +14941,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -14990,9 +15020,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -15066,9 +15099,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -15815,9 +15851,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -15891,9 +15930,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -15967,9 +16009,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -16043,9 +16088,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -16119,9 +16167,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -16195,9 +16246,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -16944,9 +16998,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -17020,9 +17077,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -17096,9 +17156,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -17172,9 +17235,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -17248,9 +17314,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -17324,9 +17393,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -18073,9 +18145,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -18149,9 +18224,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -18225,9 +18303,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -18301,9 +18382,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -18377,9 +18461,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -18453,9 +18540,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -19202,9 +19292,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -19278,9 +19371,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -19354,9 +19450,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -19430,9 +19529,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -19506,9 +19608,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -19582,9 +19687,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -20331,9 +20439,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -20407,9 +20518,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -20483,9 +20597,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -20559,9 +20676,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -20635,9 +20755,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -20711,9 +20834,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -21460,9 +21586,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -21536,9 +21665,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -21612,9 +21744,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -21688,9 +21823,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -21764,9 +21902,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
@@ -21840,9 +21981,12 @@ Cell[BoxData[
                RowBox[{"Sin", "[", "\[Theta]", "]"}], " ", 
                RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]}], "}"}]}], "//", 
           "Simplify"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"Evaluate", "[", 
-         RowBox[{"Symbol", "[", "varName", "]"}], "]"}], "=", "result"}], ";",
+       RowBox[{"With", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"s", "=", 
+           RowBox[{"Symbol", "[", "varName", "]"}]}], "}"}], ",", 
+         RowBox[{"s", "=", "result"}]}], "]"}], ";",
         "\[IndentingNewLine]", 
        RowBox[{"Print", "[", 
         RowBox[{
